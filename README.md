@@ -11,3 +11,37 @@
 <br>
 
 <h1 align="center" style="margin-top: 20px;">CIn Bizarre Adventures</h1>
+
+
+### 📌 Descrição
+• ...
+
+
+#
+
+
+### 📌 Equipe
+| Nome completo                              | Email     |
+|-------------------------------------------|-------------|
+| Luiz Philip Santiago da Silva             | `< lpss@cin.ufpe.br >`    |
+| Felipe Augusto Lira Dias                  | `< fald@cin.ufpe.br >`    |
+| Arthur Dias de Oliveira                   | `< ado@cin.ufpe.br >`     |
+| Gabriel André Souza Fernandes da Cunha    | `< gasfc@cin.ufpe.br >`   |
+| Andreson Gomes de Lima                    | `< agl4@cin.ufpe.br >`    |
+
+
+# 
+
+
+### 📌 Etapa I - *Design*
+• Foi realizada a primeira divisão do projeto: *design*. Cada membro - ou dupla - ficou responsável por uma ou mais atribuições do aspecto do design do projeto.
+
+| Responsável(s)                             | Responsabilidade     |
+|-------------------------------------------|-------------|
+| Luiz Philip Santiago da Silva e Felipe Augusto Lira Dias           | `Criação do mapa`    |
+| Arthur Dias de Oliveira                   | `Telas do game`     |
+| Gabriel André Souza Fernandes da Cunha    | `Coletáveis`   |
+| Andreson Gomes de Lima                    | `Personagens`    |
+
+
+
