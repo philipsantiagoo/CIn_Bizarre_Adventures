@@ -1,0 +1,144 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Mapa CIn.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "": {
+            "scaleInDock": 1.5793,
+            "scaleInEditor": 1
+        },
+        "#img1": {
+            "scaleInDock": 1.22
+        },
+        "#img2": {
+            "scaleInDock": 1
+        },
+        "#img3": {
+            "scaleInDock": 1
+        },
+        "#img4": {
+            "scaleInDock": 1
+        },
+        "#img5": {
+            "scaleInDock": 1
+        },
+        "#img9": {
+            "scaleInEditor": 1
+        },
+        "Mapa CIn.tmx": {
+            "scale": 0.5659,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 756.3173705601696,
+                "y": 386.9941685810214
+            }
+        },
+        "Mapa CIn.tmx#img1": {
+            "scaleInDock": 2.2325,
+            "scaleInEditor": 1
+        },
+        "Mapa CIn.tmx#img10": {
+            "scaleInDock": 1.5793,
+            "scaleInEditor": 1
+        },
+        "Mapa CIn.tmx#img12": {
+            "scaleInDock": 1.2818,
+            "scaleInEditor": 1
+        },
+        "Mapa CIn.tmx#img2": {
+            "scaleInDock": 1.812,
+            "scaleInEditor": 1
+        },
+        "Mapa CIn.tmx#img3": {
+            "scaleInDock": 1.2754,
+            "scaleInEditor": 1
+        },
+        "Mapa CIn.tmx#img4": {
+            "scaleInDock": 1.2516,
+            "scaleInEditor": 1
+        },
+        "Mapa CIn.tmx#img5": {
+            "scaleInDock": 1.9079,
+            "scaleInEditor": 1
+        },
+        "Mapa CIn.tmx#img6": {
+            "scaleInDock": 0.6883,
+            "scaleInEditor": 1
+        },
+        "Mapa CIn.tmx#img7": {
+            "scaleInDock": 1.2493,
+            "scaleInEditor": 1
+        },
+        "Mapa CIn.tmx#img8": {
+            "scaleInDock": 0.8662,
+            "scaleInEditor": 1
+        },
+        "Mapa CIn.tmx#img9": {
+            "scaleInDock": 0.9716,
+            "scaleInEditor": 1
+        },
+        "Mapa.tmx": {
+            "scale": 2.2775,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 270.6915477497256,
+                "y": 270.2524698133919
+            }
+        },
+        "Mapa.tmx#img1": {
+            "scaleInDock": 2.2325
+        },
+        "Mapa.tmx#img10": {
+            "scaleInDock": 1
+        },
+        "Mapa.tmx#img2": {
+            "scaleInDock": 2.4031
+        },
+        "Mapa.tmx#img3": {
+            "scaleInDock": 1
+        },
+        "Mapa.tmx#img4": {
+            "scaleInDock": 1
+        },
+        "Mapa.tmx#img5": {
+            "scaleInDock": 2.3751
+        },
+        "Mapa.tmx#img6": {
+            "scaleInDock": 1.2751
+        },
+        "Mapa.tmx#img7": {
+            "scaleInDock": 0.4877
+        },
+        "Mapa.tmx#img8": {
+            "scaleInDock": 1
+        },
+        "Mapa.tmx#img9": {
+            "scaleInDock": 1
+        }
+    },
+    "last.imagePath": "C:/Users/Notebook/Downloads",
+    "map.height": 60,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 40,
+    "openFiles": [
+        "Mapa CIn.tmx"
+    ],
+    "project": "map.tiled-project",
+    "recentFiles": [
+        "Mapa CIn.tmx",
+        "Mapa.tmx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    },
+    "tileset.useTransparentColor": true
+}
