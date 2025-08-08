@@ -47,7 +47,7 @@
 #
 
 
-### Etapa II - *Programação inicial*
+### 📌 Etapa II - *Programação inicial*
 • Foi realizada a primeira etapa da programação que visa estabelecer 85% dos requisitos mínimos do game.
 
 | Responsável(s)                             | Responsabilidade     |
