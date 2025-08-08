@@ -44,4 +44,14 @@
 | Andreson Gomes de Lima                    | `Personagens`    |
 
 
+#
 
+
+### Etapa II - *Programação inicial*
+• Foi realizada a primeira etapa da programação que visa estabelecer 85% dos requisitos mínimos do game.
+
+| Responsável(s)                             | Responsabilidade     |
+|-------------------------------------------|-------------|
+| Luiz Philip Santiago da Silva e Felipe Augusto Lira Dias           | `movimentação do personagem no mapa`    |
+| Arthur Dias de Oliveira                   | `Interface com o o usuário (menu inicial, texto, afins)`     |
+| Gabriel André Souza Fernandes da Cunha e Andreson Gomes de Lima    | `Mecânica de colisão com os coletáveis`   |
