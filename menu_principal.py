@@ -6,7 +6,7 @@ from main import play
 
 pg.init()
 screen = pg.display.set_mode((800, 750))
-background = pg.image.load("Telas do Jogo/tela_inicial.jpg")
+background = pg.image.load("telas/tela_inicial.jpg")
 background = pg.transform.scale(background, (800, 750))
 pg.display.set_caption("Main Menu")
 
