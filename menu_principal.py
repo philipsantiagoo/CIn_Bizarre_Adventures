@@ -15,7 +15,7 @@ background = pg.transform.scale(background, (800, 750))
 pg.display.set_caption("Main Menu")
 
 # criacao do bg do botao de play
-button_surface = pg.image.load("Botões/botao_padrao.png")
+button_surface = pg.image.load("buttons/botao_padrao.png")
 button_surface = pg.transform.scale(button_surface, (280, 100))
 
 # criacao do botao funcional em si

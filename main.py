@@ -1,6 +1,7 @@
 import pygame as pg
 from sys import exit
 from pytmx.util_pygame import load_pygame
+import game_classes as gc
 
 def play():
     # inicializando o pygame
@@ -12,6 +13,9 @@ def play():
 
     # carregando o mapa do game
     mapa = load_pygame(mapa_path)
+
+    # definindo a fonte para o inventário
+    font = pg.font.SysFont("Papyrus", 30)
 
     # criando a janela (screen) com o tamanho do mapa
     janela_largura = mapa.width * mapa.tilewidth
@@ -41,6 +45,7 @@ def play():
                     janela.blit(
                         tile, (x * mapa.tilewidth, y * mapa.tileheight))
 
+        gc.mostrar_inventario(janela, gc.imagens_itens, gc.inventario, font)
         pg.display.flip()  # atualiza a janela de acordo com os novos conteúdos
         clock.tick(60)  # definindo uma taxa de 60 FPS
 
