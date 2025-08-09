@@ -1,9 +1,11 @@
 import pygame as pg
 from sys import exit
+from pytmx.util_pygame import load_pygame
 
 def play():
     # inicializando o pygame
     pg.init()
+    mapa_path = "mapa/map.tmx"
 
     # cria uma janela temporária para permitir conversão de imagens
     janela_temp = pg.display.set_mode((1, 1))
