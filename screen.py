@@ -1,5 +1,6 @@
 import pygame as pg
 import os
+import inventory as inv
 from pytmx.util_pygame import load_pygame
 
 from player import Player  # supondo que Player tá num arquivo separado player.py
@@ -39,6 +40,7 @@ def play():
 
         player.update(walls)
         player.draw(screen)
+        inv.mostrar_inventario(screen, inv.imagens_itens, inv.inventario, inv.main_font)
 
         pg.display.flip()
         clock.tick(60)

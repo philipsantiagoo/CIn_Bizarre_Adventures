@@ -141,8 +141,8 @@ def main():
         pg.display.flip()
         clock.tick(60)
 
-    pg.quit()
-    exit()
+    '''pg.quit()
+    exit()'''
 
 if __name__ == "__main__":
     main()

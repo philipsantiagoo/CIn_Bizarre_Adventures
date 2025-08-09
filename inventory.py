@@ -3,7 +3,7 @@ import pygame as pg
 
 pg.init()
 screen = pg.display.set_mode((800, 750))
-main_font = pg.font.SysFont("Papyrus", 70)
+main_font = pg.font.SysFont("Papyrus", 30)
 
 
 # Inventário do jogador (começa com 0 de cada tipo)
