@@ -1,7 +1,15 @@
+import os
 import pygame as pg
+from pytmx.util_pygame import load_pygame
 from sys import exit
 
+
+# Função para inicializar o mapa do jogo
 def play():
+    # definindo um caminho absoluto para acessar o mapa criado
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    mapa_path = os.path.join(base_path, 'mapa', 'map.tmx')
+
     # inicializando o pygame
     pg.init()
 
