@@ -1,7 +1,9 @@
 import pygame as pg
 from sys import exit
 import inventory as gc
+import button
 from screen import play
+
 
 # inicia o pygame
 pg.init()
@@ -19,7 +21,7 @@ button_surface = pg.image.load("buttons/botao_padrao.png")
 button_surface = pg.transform.scale(button_surface, (280, 100))
 
 # criacao do botao funcional em si
-main_button = gc.Button(button_surface, 400, 600, "Play")
+main_button = button.Button(button_surface, 400, 600, "Play")
 main_font = pg.font.SysFont("Papyrus", 65)
 
 # game loop
