@@ -1,52 +1,38 @@
-import os
 import pygame as pg
-from pytmx.util_pygame import load_pygame
 from sys import exit
+import button_class as bcs
+from display_map import play
 
-def play():
-    # definindo um caminho absoluto para acessar o mapa criado
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    mapa_path = os.path.join(base_path, 'mapa', 'map.tmx')
 
-    # inicializando o pygame
-    pg.init()
+pg.init()
+screen = pg.display.set_mode((800, 750))
+background = pg.image.load("telas/tela_inicial.jpg")
+background = pg.transform.scale(background, (800, 750))
+pg.display.set_caption("Main Menu")
 
-    # cria uma janela temporária para permitir conversão de imagens
-    janela_temp = pg.display.set_mode((1, 1))
 
-    # carregando o mapa do game
-    mapa = load_pygame(mapa_path)
+button_surface = pg.image.load("buttons/botao_padrao.png")
+button_surface = pg.transform.scale(button_surface, (280, 100))
 
-    # criando a janela (screen) com o tamanho do mapa
-    janela_largura = mapa.width * mapa.tilewidth
-    janela_altura = mapa.height * mapa.tileheight
-    janela = pg.display.set_mode((janela_largura, janela_altura))
 
-    # definindo o título da janela
-    pg.display.set_caption('CIn Bizarre Adventures')
+main_button = bcs.Button(button_surface, 400, 600, "Play")
+main_font = pg.font.SysFont("Papyrus", 70)
 
-    # definindo o clock (relógio) de exibição da janela (screen)
-    clock = pg.time.Clock()
 
-    # definindo a variável de continuação para exibir o mapa
-    continuar = True
+while True:
+    mouse_pos = pg.mouse.get_pos()
 
-    while continuar:
-        for evento in pg.event.get():
-            if evento.type == pg.QUIT:
-                continuar = False
+    play_button = pg.Rect(280, 575, 250, 70)
+    for event in pg.event.get():
+        if event.type == pg.QUIT:
+            pg.quit()
+            exit()
+        
+        if event.type == pg.MOUSEBUTTONDOWN:
+            if main_button.checkForInput(mouse_pos):
+                play()
 
-        janela.fill((0, 0, 0))  # definindo a cor de fundo da janela (preto)
-
-        # desenha cada tile do mapa
-        for camada in mapa.visible_layers:
-            if hasattr(camada, 'tiles'):
-                for x, y, tile in camada.tiles():
-                    janela.blit(
-                        tile, (x * mapa.tilewidth, y * mapa.tileheight))
-
-        pg.display.flip()  # atualiza a janela de acordo com os novos conteúdos
-        clock.tick(60)  # definindo uma taxa de 60 FPS
-
-    pg.quit()  # fecha o pygame
-    exit()  # encerra o programa
+    screen.blit(background, (0, 0))
+    main_button.update()
+    main_button.changeColor(mouse_pos)
+    pg.display.update()

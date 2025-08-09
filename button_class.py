@@ -1,10 +1,12 @@
 import pygame as pg
 import sys
 
+
 pg.init()
 screen = pg.display.set_mode((800, 750))
 pg.display.set_caption("Main Menu")
 main_font = pg.font.SysFont("Papyrus", 70)
+
 
 class Button():
 	def __init__(self, image, x_pos, y_pos, text_input):
