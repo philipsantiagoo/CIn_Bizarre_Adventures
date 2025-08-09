@@ -2,6 +2,8 @@ import os
 import pygame as pg
 from pytmx.util_pygame import load_pygame
 from sys import exit
+import game_classes as gc
+
 
 def play():
     # definindo um caminho absoluto para acessar o mapa criado
@@ -13,6 +15,9 @@ def play():
 
     # cria uma janela temporária para permitir conversão de imagens
     janela_temp = pg.display.set_mode((1, 1))
+
+    # definindo a fonte principal
+    main_font = pg.font.SysFont("Papyrus", 30)
 
     # carregando o mapa do game
     mapa = load_pygame(mapa_path)
@@ -36,6 +41,17 @@ def play():
             if evento.type == pg.QUIT:
                 continuar = False
 
+            # Simulação de pegar um item
+            if evento.type == pg.KEYDOWN:
+                if evento.key == pg.K_1:
+                    gc.inventario["vida"] += 1
+                if evento.key == pg.K_2:
+                    gc.inventario["moedas"] += 1
+                if evento.key == pg.K_3:
+                    gc.inventario["gasolina"] += 1
+                if evento.key == pg.K_4:
+                    gc.inventario["lanterna"] += 1
+
         janela.fill((0, 0, 0))  # definindo a cor de fundo da janela (preto)
 
         # desenha cada tile do mapa
@@ -45,6 +61,8 @@ def play():
                     janela.blit(
                         tile, (x * mapa.tilewidth, y * mapa.tileheight))
 
+        gc.mostrar_inventario(janela, gc.imagens_itens,
+                              gc.inventario, main_font)
         pg.display.flip()  # atualiza a janela de acordo com os novos conteúdos
         clock.tick(60)  # definindo uma taxa de 60 FPS
 
