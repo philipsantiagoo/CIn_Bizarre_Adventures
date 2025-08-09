@@ -14,7 +14,10 @@
 
 
 ### 📌 Descrição
-• ...
+• Este é um projeto pra disciplina de Introdução à Programação, mais conhecida como IP para os íntimos, e o nosso projeto
+consiste de um jogo baseado no estilo Pac-man, onde o jogador precisa cumprir alguns objetivos antes de sair do labirinto
+enquanto é perseguido por alguns inimigos. Esse projeto usa alguns conceitos de POO em Python e fazer esse jogo tá sendo
+um desafio interessante.
 
 
 #
