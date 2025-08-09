@@ -20,8 +20,8 @@
 110,210,195,210,211,210,195,91,92,92,92,92,111,111,111,111,111,111,110,112,111,110,112,111,91,92,92,92,92,93,111,91,93,111,110,112,111,110,112,111,91,92,92,93,111,211,211,211,211,211,
 110,210,210,210,195,211,91,111,111,111,111,111,111,111,111,91,93,111,110,211,110,110,112,111,110,111,111,111,111,112,111,110,112,111,110,112,111,110,112,111,110,111,111,112,111,111,111,111,211,211,
 110,210,111,210,211,91,111,111,111,111,111,111,111,111,111,110,112,111,195,91,211,110,211,110,111,111,111,111,110,112,111,110,112,111,110,112,111,111,111,111,111,111,110,111,92,93,211,211,211,211,
-110,93,111,92,211,91,92,92,93,111,91,92,92,93,111,211,110,195,195,211,195,211,211,211,211,91,93,111,110,112,111,110,111,92,111,111,92,92,92,92,93,111,110,111,111,111,93,211,211,211,
-110,112,111,111,92,111,111,111,111,92,111,111,111,112,111,211,195,91,211,195,195,195,211,211,211,211,112,111,110,112,111,110,111,111,111,111,111,111,111,111,112,111,111,111,111,110,192,111,111,112,
+110,93,111,92,211,91,92,92,92,92,92,92,92,93,111,211,110,195,195,211,195,211,211,211,211,91,93,111,110,112,111,110,111,92,111,111,92,92,92,92,93,111,110,111,111,111,93,211,211,211,
+110,112,111,111,92,111,111,111,111,111,111,111,111,112,111,211,195,91,211,195,195,195,211,211,211,211,112,111,110,112,111,110,111,111,111,111,111,111,111,111,112,111,111,111,111,110,192,111,111,112,
 110,112,111,111,111,111,111,111,110,111,112,111,110,112,111,211,211,110,195,91,93,195,211,91,211,91,111,111,111,111,111,111,111,111,111,111,111,111,111,110,111,92,92,92,93,211,211,211,211,211,
 110,111,92,92,92,92,93,111,111,111,111,111,110,112,111,211,211,211,91,111,112,195,195,110,91,92,92,92,92,92,92,92,92,92,92,92,92,93,111,110,111,112,211,211,211,211,211,211,211,211,
 110,111,111,111,111,111,111,92,92,92,93,111,110,112,111,211,211,211,211,110,112,211,91,111,110,111,111,111,111,111,111,111,111,111,111,111,111,112,111,111,112,211,111,111,111,111,111,111,111,112,
@@ -33,7 +33,7 @@
 110,111,112,111,110,112,111,91,92,92,93,195,110,111,92,92,92,92,112,195,110,111,112,195,195,195,195,195,110,111,112,195,110,112,195,110,111,195,110,111,111,111,111,111,111,111,111,111,192,211,
 110,110,112,111,110,112,111,110,111,111,112,195,110,111,111,111,111,112,195,195,110,111,112,195,195,214,198,195,110,195,195,214,91,195,198,91,92,93,195,91,195,91,92,92,92,93,192,192,192,211,
 91,111,112,111,110,112,111,110,195,195,195,198,110,111,111,111,111,112,195,195,110,112,195,195,214,210,214,195,91,195,198,214,195,214,198,110,111,112,195,110,195,110,111,111,111,111,92,93,192,211,
-110,111,112,111,110,112,112,195,214,214,198,198,110,111,111,111,111,112,195,198,110,112,195,214,210,210,210,214,195,198,214,210,214,214,214,195,110,195,195,110,195,110,111,111,111,195,110,111,93,211,
+110,111,112,111,110,112,112,195,214,214,198,198,110,91,92,92,92,112,195,198,110,112,195,214,210,210,210,214,195,198,214,210,214,214,214,195,110,195,195,110,195,110,111,111,111,195,110,111,93,211,
 110,111,111,111,111,111,112,195,198,214,214,195,110,195,195,110,111,112,195,214,198,112,195,214,210,210,210,210,214,195,210,210,210,210,214,214,195,198,195,195,195,91,195,91,93,195,91,111,110,93,
 110,112,195,91,92,92,93,198,198,214,214,214,195,214,195,110,112,195,214,214,214,198,214,210,210,210,210,210,214,214,210,210,210,210,210,214,198,214,195,198,195,110,195,110,195,198,110,111,110,112,
 110,112,195,110,111,112,195,198,214,210,214,210,214,214,195,110,112,195,214,210,93,214,210,210,210,210,210,210,210,210,210,192,210,210,210,210,210,214,198,214,214,195,198,110,195,198,195,195,110,112,
@@ -70,7 +70,7 @@
 0,0,0,0,0,0,433,0,0,0,0,0,0,0,467,467,467,467,0,0,467,0,0,467,110,111,0,0,0,0,467,0,0,467,0,0,467,0,0,467,0,0,0,0,467,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,467,0,0,467,0,0,467,0,0,467,0,0,0,0,0,0,467,0,0,467,0,0,467,0,0,467,0,0,0,0,467,467,467,467,0,0,
 0,0,0,0,0,467,467,467,467,467,467,467,467,467,467,0,0,467,467,467,467,0,0,467,467,467,467,467,0,0,467,0,0,467,0,0,467,467,467,467,467,467,0,0,0,0,0,0,0,0,
-0,0,467,0,0,0,0,0,0,467,0,0,0,0,467,0,0,467,0,0,0,0,0,0,433,0,0,467,0,0,467,0,0,0,0,0,0,0,0,0,0,467,0,0,0,0,0,0,0,0,
+0,0,467,0,0,0,0,0,0,0,0,0,0,0,467,0,0,467,0,0,0,0,0,0,433,0,0,467,0,0,467,0,0,0,0,0,0,0,0,0,0,467,0,0,0,0,0,0,0,0,
 0,0,467,0,0,0,0,0,0,0,0,0,0,0,467,0,0,467,0,0,0,0,0,0,0,0,0,467,0,0,467,0,0,0,0,0,0,0,0,0,0,467,467,467,467,0,0,467,467,467,
 0,0,467,467,467,467,467,467,0,0,0,467,0,0,467,0,0,467,0,0,467,467,467,467,467,467,467,467,467,467,467,467,467,467,467,467,467,467,467,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,467,467,467,467,467,0,0,467,0,0,0,0,0,0,0,0,467,0,0,0,0,0,0,0,0,0,0,0,0,0,0,467,0,0,0,0,0,0,0,0,0,0,0,
@@ -113,162 +113,149 @@
 </data>
  </layer>
  <objectgroup id="3" name="colisão">
-  <object id="3" name="parede" x="416.135" y="688.027" width="47.23" height="15.3178"/>
-  <object id="4" name="parede" x="495.702" y="639.946" width="16.1688" height="95.7365"/>
-  <object id="5" name="parede" x="512.722" y="688.027" width="30.6357" height="15.3178"/>
-  <object id="6" name="parede" x="512.722" y="639.946" width="78.7167" height="15.7433"/>
-  <object id="7" name="parede" x="576.121" y="656.114" width="15.7433" height="47.23"/>
-  <object id="8" name="parede" x="624.628" y="656.114" width="15.3178" height="47.6555"/>
-  <object id="9" name="parede" x="640.797" y="687.601" width="159.561" height="16.5943"/>
-  <object id="10" name="parede" x="783.763" y="704.195" width="16.5943" height="31.0612"/>
-  <object id="11" name="parede" x="671.858" y="640.371" width="32.3377" height="14.8923"/>
-  <object id="12" name="parede" x="736.108" y="640.371" width="64.2499" height="16.5943"/>
-  <object id="13" name="parede" x="783.763" y="658.242" width="16.1688" height="28.5082"/>
-  <object id="14" name="parede" x="592.513" y="576.136" width="110.707" height="15.3942"/>
-  <object id="15" name="parede" x="640.005" y="591.857" width="16.0493" height="32.0985"/>
-  <object id="16" name="parede" x="687.825" y="591.857" width="15.7217" height="47.1652"/>
-  <object id="17" name="parede" x="448.397" y="591.53" width="158.855" height="16.0493"/>
-  <object id="18" name="parede" x="448.069" y="607.907" width="16.0493" height="78.9362"/>
-  <object id="19" name="parede" x="368.15" y="640.005" width="47.4927" height="15.0667"/>
-  <object id="20" name="parede" x="368.478" y="655.727" width="15.3942" height="47.8202"/>
-  <object id="21" name="parede" x="320.33" y="640.333" width="15.3942" height="95.2736"/>
-  <object id="22" name="parede" x="399.921" y="559.759" width="15.7217" height="79.2637"/>
+  <object id="3" name="parede" x="418.29" y="689.104" width="43.4594" height="12.3552"/>
+  <object id="4" name="parede" x="498.395" y="643.178" width="11.5902" height="92.5045"/>
+  <object id="5" name="parede" x="513.799" y="689.912" width="27.9424" height="11.8165"/>
+  <object id="6" name="parede" x="512.722" y="642.909" width="76.562" height="10.626"/>
+  <object id="7" name="parede" x="578.006" y="656.114" width="11.1647" height="44.5367"/>
+  <object id="8" name="parede" x="626.123" y="657.908" width="11.4312" height="43.1709"/>
+  <object id="9" name="parede" x="640.797" y="690.591" width="159.561" height="11.2128"/>
+  <object id="10" name="parede" x="785.189" y="706.869" width="14.2767" height="26.9608"/>
+  <object id="11" name="parede" x="673.951" y="642.165" width="29.049" height="9.51081"/>
+  <object id="12" name="parede" x="739.098" y="642.763" width="61.2602" height="10.9138"/>
+  <object id="13" name="parede" x="786.753" y="658.242" width="13.1791" height="28.5082"/>
+  <object id="14" name="parede" x="595.503" y="578.827" width="104.728" height="10.0127"/>
+  <object id="15" name="parede" x="642.397" y="591.857" width="11.2658" height="28.2119"/>
+  <object id="16" name="parede" x="690.815" y="591.857" width="10.3402" height="47.1652"/>
+  <object id="17" name="parede" x="451.213" y="593.219" width="154.913" height="12.1072"/>
+  <object id="18" name="parede" x="450.493" y="607.907" width="10.932" height="78.9362"/>
+  <object id="19" name="parede" x="369.227" y="641.352" width="44.5301" height="12.6427"/>
+  <object id="20" name="parede" x="370.094" y="658.69" width="12.4316" height="42.4336"/>
+  <object id="21" name="parede" x="321.407" y="641.41" width="13.2395" height="91.503"/>
+  <object id="22" name="parede" x="402.211" y="559.759" width="10.6841" height="79.2637"/>
   <object id="23" name="parede" x="496.217" y="560.414" width="15.0667" height="30.1333"/>
   <object id="24" name="parede" x="271.855" y="592.185" width="95.6405" height="15.0667"/>
-  <object id="25" name="parede" x="271.855" y="607.907" width="15.7217" height="48.1478"/>
-  <object id="26" name="parede" x="207.985" y="640.005" width="62.8869" height="15.3942"/>
-  <object id="27" name="parede" x="207.658" y="655.727" width="16.7043" height="32.0985"/>
-  <object id="28" name="parede" x="32.0985" y="688.481" width="255.806" height="15.0667"/>
-  <object id="29" name="parede" x="32.0985" y="640.333" width="15.7217" height="46.8376"/>
-  <object id="30" name="parede" x="80.2463" y="640.333" width="95.968" height="15.3942"/>
-  <object id="31" name="parede" x="159.182" y="591.857" width="32.4261" height="16.0493"/>
-  <object id="32" name="parede" x="159.838" y="609.217" width="16.0493" height="30.1333"/>
-  <object id="33" name="parede" x="63.542" y="560.414" width="16.0493" height="47.4927"/>
-  <object id="36" name="parede" x="400.464" y="512.252" width="15.3369" height="32.3779"/>
-  <object id="37" name="parede" x="304.011" y="543.949" width="112.471" height="16.0185"/>
+  <object id="25" name="parede" x="272.535" y="612.327" width="13.002" height="40.6686"/>
+  <object id="26" name="parede" x="209.345" y="642.045" width="60.5072" height="11.9946"/>
+  <object id="27" name="parede" x="209.018" y="659.467" width="14.3246" height="27.339"/>
+  <object id="28" name="parede" x="37.1979" y="689.841" width="247.307" height="11.6671"/>
+  <object id="29" name="parede" x="33.1184" y="644.413" width="12.662" height="41.7382"/>
+  <object id="30" name="parede" x="82.626" y="642.033" width="92.5684" height="12.6745"/>
+  <object id="31" name="parede" x="161.222" y="593.557" width="28.6865" height="13.3296"/>
+  <object id="32" name="parede" x="161.198" y="612.277" width="14.3495" height="27.0736"/>
+  <object id="33" name="parede" x="64.9019" y="564.154" width="13.6696" height="40.6934"/>
+  <object id="36" name="parede" x="401.838" y="515" width="12.1312" height="29.6301"/>
+  <object id="37" name="parede" x="304.011" y="547.155" width="112.471" height="9.14911"/>
   <object id="38" name="parede" x="224.26" y="559.286" width="16.0185" height="79.7519"/>
-  <object id="39" name="parede" x="159.845" y="543.949" width="111.789" height="15.6777"/>
-  <object id="40" name="parede" x="112.13" y="527.93" width="16.7002" height="112.13"/>
-  <object id="41" name="parede" x="256.015" y="416.024" width="16.0009" height="126.293"/>
-  <object id="42" name="parede" x="304.017" y="464.027" width="15.4295" height="78.8616"/>
-  <object id="43" name="parede" x="160.09" y="496.638" width="63.3815" height="14.8783"/>
-  <object id="44" name="parede" x="207.999" y="416.295" width="15.771" height="79.4501"/>
-  <object id="45" name="parede" x="160.09" y="415.997" width="47.313" height="15.771"/>
-  <object id="46" name="parede" x="111.885" y="415.7" width="16.3661" height="16.0686"/>
-  <object id="47" name="parede" x="80.0452" y="479.974" width="95.5187" height="16.0686"/>
-  <object id="48" name="parede" x="0.297566" y="591.859" width="62.4888" height="16.3661"/>
-  <object id="49" name="parede" x="0" y="544.248" width="31.8396" height="15.1759"/>
-  <object id="50" name="parede" x="31.9846" y="495.762" width="31.7181" height="15.9923"/>
-  <object id="51" name="parede" x="63.7028" y="496.029" width="16.5254" height="31.9846"/>
-  <object id="52" name="parede" x="0.266539" y="447.785" width="47.1774" height="15.9923"/>
-  <object id="53" name="parede" x="32.2512" y="431.793" width="143.664" height="15.9923"/>
-  <object id="54" name="parede" x="0.533077" y="368.09" width="14.9262" height="47.1774"/>
-  <object id="55" name="parede" x="63.9693" y="384.082" width="15.7258" height="15.4592"/>
-  <object id="56" name="parede" x="15.7258" y="368.09" width="143.931" height="15.7258"/>
-  <object id="57" name="parede" x="144.078" y="288.155" width="16.0831" height="78.7402"/>
-  <object id="58" name="parede" x="256.324" y="335.735" width="15.748" height="32.5013"/>
-  <object id="59" name="parede" x="192.327" y="367.901" width="143.073" height="15.748"/>
-  <object id="60" name="parede" x="192.327" y="288.155" width="15.413" height="79.0752"/>
-  <object id="61" name="parede" x="207.74" y="288.155" width="64.3324" height="15.748"/>
-  <object id="62" name="parede" x="303.904" y="288.491" width="31.8311" height="15.0779"/>
-  <object id="63" name="parede" x="320.322" y="304.239" width="15.0779" height="62.322"/>
-  <object id="64" name="parede" x="272.407" y="416.15" width="111.912" height="15.413"/>
-  <object id="65" name="parede" x="352.488" y="463.729" width="15.0779" height="47.5792"/>
-  <object id="66" name="parede" x="368.236" y="463.729" width="95.4934" height="16.0831"/>
-  <object id="67" name="parede" x="448.062" y="479.81" width="16.5452" height="110.003"/>
-  <object id="68" name="parede" x="495.908" y="415.865" width="16.098" height="111.792"/>
-  <object id="69" name="parede" x="464.607" y="415.865" width="30.4074" height="16.098"/>
-  <object id="70" name="parede" x="415.865" y="368.019" width="15.6509" height="94.7994"/>
+  <object id="39" name="parede" x="164.265" y="544.969" width="104.65" height="12.958"/>
+  <object id="40" name="parede" x="113.15" y="529.97" width="13.9805" height="107.371"/>
+  <object id="41" name="parede" x="258.763" y="416.024" width="10.0474" height="126.293"/>
+  <object id="42" name="parede" x="306.765" y="468.607" width="10.3919" height="74.282"/>
+  <object id="43" name="parede" x="162.81" y="497.658" width="57.9421" height="11.8186"/>
+  <object id="44" name="parede" x="209.699" y="419.355" width="12.7113" height="75.3705"/>
+  <object id="45" name="parede" x="162.81" y="418.037" width="43.5734" height="12.0314"/>
+  <object id="46" name="parede" x="112.905" y="418.08" width="14.3263" height="13.0089"/>
+  <object id="47" name="parede" x="83.1049" y="481.334" width="89.3994" height="12.669"/>
+  <object id="48" name="parede" x="1.65742" y="593.219" width="58.7492" height="13.3064"/>
+  <object id="49" name="parede" x="1.69981" y="546.288" width="28.44" height="12.1162"/>
+  <object id="50" name="parede" x="33.6844" y="498.142" width="28.9984" height="11.5728"/>
+  <object id="51" name="parede" x="65.0627" y="499.429" width="13.8057" height="26.2052"/>
+  <object id="52" name="parede" x="2.64628" y="449.485" width="41.0581" height="12.9326"/>
+  <object id="53" name="parede" x="34.6309" y="433.493" width="137.885" height="12.9326"/>
+  <object id="54" name="parede" x="0.533077" y="369.11" width="12.8864" height="45.4776"/>
+  <object id="55" name="parede" x="65.6691" y="385.782" width="11.6462" height="12.0596"/>
+  <object id="56" name="parede" x="18.1055" y="369.11" width="139.172" height="11.3063"/>
+  <object id="57" name="parede" x="146.458" y="293.594" width="11.3236" height="72.2809"/>
+  <object id="58" name="parede" x="256.687" y="337.916" width="13.9305" height="29.9569"/>
+  <object id="59" name="parede" x="194.508" y="370.445" width="139.075" height="10.6591"/>
+  <object id="60" name="parede" x="193.417" y="289.972" width="12.8686" height="76.5308"/>
+  <object id="61" name="parede" x="210.284" y="289.245" width="58.1531" height="12.8401"/>
+  <object id="62" name="parede" x="307.539" y="288.854" width="26.0152" height="13.2604"/>
+  <object id="63" name="parede" x="322.139" y="307.147" width="11.0795" height="57.9601"/>
+  <object id="64" name="parede" x="272.407" y="418.44" width="109.164" height="10.3754"/>
+  <object id="65" name="parede" x="354.778" y="465.103" width="11.4142" height="43.9155"/>
+  <object id="66" name="parede" x="369.61" y="465.561" width="91.3718" height="12.4194"/>
+  <object id="67" name="parede" x="449.894" y="479.81" width="11.0497" height="110.003"/>
+  <object id="68" name="parede" x="498.198" y="419.987" width="11.9764" height="103.549"/>
+  <object id="69" name="parede" x="467.355" y="416.781" width="24.4539" height="12.8923"/>
+  <object id="70" name="parede" x="417.697" y="374.888" width="12.4452" height="87.93"/>
   <object id="71" name="parede" x="464.16" y="384.117" width="16.5452" height="30.8545"/>
-  <object id="72" name="parede" x="464.607" y="368.466" width="94.3523" height="16.5452"/>
-  <object id="73" name="parede" x="544.126" y="385.925" width="16.3167" height="173.808"/>
-  <object id="74" name="parede" x="591.657" y="400.114" width="16.3167" height="173.808"/>
-  <object id="75" name="parede" x="735.354" y="543.312" width="16.7804" height="64.1384"/>
-  <object id="76" name="parede" x="783.831" y="543.312" width="16.4075" height="95.8347"/>
-  <object id="77" name="parede" x="608.569" y="527.65" width="191.297" height="15.6617"/>
-  <object id="78" name="parede" x="607.934" y="399.794" width="47.7417" height="15.7994"/>
-  <object id="79" name="parede" x="639.876" y="415.593" width="15.7994" height="79.684"/>
-  <object id="80" name="parede" x="687.962" y="480.165" width="79.684" height="15.7994"/>
-  <object id="81" name="parede" x="751.503" y="448.223" width="16.1429" height="30.9119"/>
-  <object id="82" name="parede" x="736.39" y="432.08" width="31.5988" height="15.456"/>
-  <object id="83" name="parede" x="687.967" y="398.415" width="15.782" height="80.8426"/>
-  <object id="84" name="parede" x="687.967" y="352.036" width="15.782" height="31.8861"/>
-  <object id="85" name="parede" x="687.645" y="384.566" width="31.564" height="14.8158"/>
-  <object id="86" name="parede" x="752.119" y="304.649" width="15.926" height="126.381"/>
-  <object id="87" name="parede" x="543.47" y="351.869" width="143.701" height="15.8467"/>
-  <object id="88" name="parede" x="512.137" y="319.455" width="15.8467" height="15.8467"/>
-  <object id="89" name="parede" x="512.137" y="303.249" width="239.141" height="16.567"/>
-  <object id="90" name="parede" x="463.517" y="272.275" width="15.8467" height="95.0803"/>
-  <object id="91" name="parede" x="415.976" y="320.176" width="46.8199" height="15.8467"/>
-  <object id="92" name="parede" x="320.536" y="271.915" width="15.1264" height="15.4866"/>
+  <object id="72" name="parede" x="468.271" y="372.13" width="86.567" height="9.67581"/>
+  <object id="73" name="parede" x="545.958" y="386.383" width="12.1951" height="169.228"/>
+  <object id="74" name="parede" x="594.049" y="400.114" width="11.5332" height="173.808"/>
+  <object id="75" name="parede" x="738.643" y="543.312" width="11.0999" height="61.1487"/>
+  <object id="76" name="parede" x="786.522" y="543.312" width="13.7168" height="95.8347"/>
+  <object id="77" name="parede" x="608.569" y="530.341" width="191.297" height="10.5792"/>
+  <object id="78" name="parede" x="609.362" y="401.793" width="42.6008" height="12.3721"/>
+  <object id="79" name="parede" x="641.59" y="419.877" width="12.9433" height="73.115"/>
+  <object id="80" name="parede" x="691.961" y="481.593" width="73.4006" height="12.0865"/>
+  <object id="81" name="parede" x="754.359" y="448.223" width="10.1451" height="30.9119"/>
+  <object id="82" name="parede" x="739.246" y="434.365" width="27.3147" height="10.6007"/>
+  <object id="83" name="parede" x="689.109" y="401.271" width="12.9259" height="76.2729"/>
+  <object id="84" name="parede" x="689.395" y="355.178" width="12.3547" height="26.4595"/>
+  <object id="85" name="parede" x="689.93" y="385.994" width="28.4223" height="11.1029"/>
+  <object id="86" name="parede" x="753.833" y="306.934" width="11.9275" height="121.24"/>
+  <object id="87" name="parede" x="546.612" y="353.583" width="137.132" height="11.8482"/>
+  <object id="88" name="parede" x="513.279" y="320.312" width="13.2762" height="14.1331"/>
+  <object id="89" name="parede" x="514.422" y="304.963" width="235.714" height="13.4253"/>
+  <object id="90" name="parede" x="465.807" y="275.481" width="12.183" height="90.5007"/>
+  <object id="91" name="parede" x="419.182" y="321.55" width="41.3244" height="13.5569"/>
+  <object id="92" name="parede" x="321.263" y="274.823" width="12.9455" height="10.7612"/>
   <object id="93" name="parede" x="367.716" y="271.915" width="95.8006" height="14.4061"/>
-  <object id="94" name="parede" x="367.783" y="286.529" width="15.2055" height="128.772"/>
-  <object id="95" name="parede" x="0.475172" y="271.799" width="16.631" height="15.6807"/>
-  <object id="96" name="parede" x="31.3614" y="319.316" width="33.2621" height="16.1559"/>
-  <object id="97" name="parede" x="47.0421" y="239.962" width="17.5814" height="77.9282"/>
-  <object id="98" name="parede" x="0" y="224.141" width="64.341" height="15.2079"/>
-  <object id="99" name="parede" x="415.814" y="223.9" width="111.806" height="15.5606"/>
-  <object id="100" name="parede" x="512.059" y="239.461" width="15.5606" height="16.1369"/>
-  <object id="101" name="parede" x="512.059" y="255.597" width="256.462" height="16.4251"/>
-  <object id="102" name="parede" x="752.385" y="224.188" width="16.7133" height="31.1212"/>
-  <object id="103" name="parede" x="560.182" y="208.627" width="208.916" height="15.8488"/>
-  <object id="104" name="parede" x="559.606" y="176.354" width="17.0014" height="31.4094"/>
-  <object id="105" name="parede" x="495.923" y="175.777" width="63.6833" height="16.1369"/>
-  <object id="106" name="parede" x="384.405" y="175.777" width="79.532" height="16.4251"/>
-  <object id="107" name="parede" x="272.023" y="223.612" width="112.959" height="16.1369"/>
-  <object id="108" name="parede" x="224.188" y="240.037" width="64.2596" height="15.5606"/>
-  <object id="110" name="parede" x="272.254" y="176.642" width="94.219" height="15.2725"/>
-  <object id="111" name="parede" x="367.98" y="144.368" width="16.7133" height="78.9557"/>
-  <object id="112" name="parede" x="319.801" y="127.827" width="304.35" height="16.8563"/>
-  <object id="113" name="parede" x="607.879" y="145.579" width="16.6837" height="31.2147"/>
-  <object id="114" name="parede" x="625.101" y="159.841" width="15.6073" height="16.6837"/>
-  <object id="115" name="parede" x="672.192" y="160.379" width="127.011" height="15.3382"/>
-  <object id="116" name="parede" x="751.574" y="111.942" width="47.8984" height="15.6073"/>
-  <object id="117" name="parede" x="672.461" y="111.673" width="48.1675" height="16.1455"/>
-  <object id="118" name="parede" x="656.316" y="80.1894" width="16.1455" height="48.4366"/>
-  <object id="119" name="parede" x="703.945" y="64.0439" width="64.313" height="15.6073"/>
-  <object id="120" name="parede" x="703.945" y="32.291" width="16.4146" height="31.2147"/>
-  <object id="121" name="parede" x="640.708" y="32.291" width="62.4294" height="15.3382"/>
-  <object id="122" name="parede" x="576.126" y="79.6513" width="79.6513" height="17.2219"/>
-  <object id="123" name="parede" x="576.126" y="32.291" width="16.4146" height="46.5529"/>
-  <object id="124" name="parede" x="623.508" y="0" width="17.5776" height="79.2651"/>
-  <object id="125" name="parede" x="95.4846" y="240.197" width="16.975" height="95.909"/>
-  <object id="126" name="parede" x="112.788" y="240.106" width="79.7327" height="16.1645"/>
-  <object id="127" name="parede" x="175.811" y="192.158" width="16.7093" height="47.5853"/>
-  <object id="128" name="parede" x="79.9143" y="192.158" width="95.3523" height="15.0747"/>
-  <object id="129" name="parede" x="0.363247" y="175.993" width="95.3523" height="16.1645"/>
-  <object id="130" name="parede" x="31.7857" y="95.942" width="16.1853" height="46.996"/>
-  <object id="131" name="parede" x="48.166" y="128.313" width="80.7317" height="15.7953"/>
-  <object id="132" name="parede" x="111.932" y="144.693" width="80.3416" height="14.6253"/>
-  <object id="133" name="parede" x="176.089" y="127.923" width="16.3803" height="16.3803"/>
-  <object id="134" name="parede" x="224.146" y="0.494805" width="15.3389" height="208.391"/>
-  <object id="135" name="parede" x="144.107" y="79.909" width="16.2527" height="31.6927"/>
-  <object id="136" name="parede" x="79.909" y="79.6381" width="63.9272" height="15.9818"/>
-  <object id="137" name="parede" x="161.172" y="79.6381" width="62.031" height="15.9818"/>
-  <object id="138" name="parede" x="95.8908" y="31.6927" width="96.1617" height="15.44"/>
-  <object id="139" name="parede" x="176.071" y="0" width="15.9818" height="31.151"/>
-  <object id="140" name="parede" x="239.185" y="0" width="33.318" height="15.44"/>
-  <object id="141" name="parede" x="239.998" y="47.6745" width="31.6927" height="15.7109"/>
-  <object id="142" name="parede" x="319.907" y="31.6927" width="16.5236" height="63.3854"/>
-  <object id="143" name="parede" x="288.214" y="80.1799" width="31.151" height="15.1692"/>
-  <object id="144" name="parede" x="271.961" y="47.4036" width="15.7109" height="97.2452"/>
-  <object id="145" name="parede" x="368.122" y="0.300508" width="15.9269" height="94.9605"/>
-  <object id="146" name="parede" x="416.71" y="32.1543" width="127.81" height="16.5279"/>
-  <object id="147" name="parede" x="527.692" y="49.2833" width="16.5279" height="46.8792"/>
-  <object id="148" name="parede" x="384.35" y="80.8366" width="64.6092" height="15.3259"/>
-  <object id="149" name="parede" x="431.529" y="96.1625" width="17.4295" height="31.2528"/>
+  <object id="94" name="parede" x="370.989" y="286.529" width="10.1679" height="128.772"/>
+  <object id="95" name="parede" x="0.475172" y="274.215" width="13.7754" height="11.0678"/>
+  <object id="96" name="parede" x="34.5479" y="322.148" width="27.2431" height="11.0221"/>
+  <object id="97" name="parede" x="50.1173" y="241.5" width="12.0899" height="76.3906"/>
+  <object id="98" name="parede" x="0" y="227.039" width="61.4432" height="10.7725"/>
+  <object id="99" name="parede" x="418.562" y="225.274" width="104.479" height="12.3549"/>
+  <object id="100" name="parede" x="514.807" y="241.293" width="10.523" height="13.3891"/>
+  <object id="101" name="parede" x="513.433" y="258.345" width="253.256" height="11.3875"/>
+  <object id="102" name="parede" x="754.675" y="224.188" width="11.2178" height="31.1212"/>
+  <object id="103" name="parede" x="562.472" y="210.917" width="202.047" height="10.3533"/>
+  <object id="104" name="parede" x="561.896" y="180.018" width="12.4218" height="26.8298"/>
+  <object id="105" name="parede" x="498.213" y="177.151" width="57.7298" height="12.9312"/>
+  <object id="106" name="parede" x="384.405" y="177.727" width="76.7464" height="11.9682"/>
+  <object id="107" name="parede" x="276.021" y="226.156" width="105.689" height="12.1385"/>
+  <object id="108" name="parede" x="226.732" y="241.491" width="57.3533" height="13.3797"/>
+  <object id="110" name="parede" x="274.204" y="178.87" width="92.2691" height="11.0941"/>
+  <object id="111" name="parede" x="369.373" y="147.432" width="12.8135" height="73.106"/>
+  <object id="112" name="parede" x="323.033" y="130.471" width="301.118" height="10.6867"/>
+  <object id="113" name="parede" x="609.22" y="145.311" width="14.2696" height="28.2641"/>
+  <object id="114" name="parede" x="625.906" y="161.45" width="12.3885" height="13.7331"/>
+  <object id="115" name="parede" x="674.874" y="161.452" width="122.183" height="12.3876"/>
+  <object id="116" name="parede" x="753.387" y="114.057" width="46.3878" height="12.284"/>
+  <object id="117" name="parede" x="673.972" y="113.486" width="44.24" height="12.8222"/>
+  <object id="118" name="parede" x="657.222" y="82.3042" width="13.4265" height="43.6028"/>
+  <object id="119" name="parede" x="706.06" y="65.5545" width="58.5728" height="13.1904"/>
+  <object id="120" name="parede" x="704.851" y="35.6143" width="13.3935" height="25.1724"/>
+  <object id="121" name="parede" x="643.058" y="33.7599" width="57.7288" height="13.5755"/>
+  <object id="122" name="parede" x="579.064" y="80.2389" width="74.0693" height="14.8716"/>
+  <object id="123" name="parede" x="577.889" y="36.1103" width="12.8891" height="41.2647"/>
+  <object id="124" name="parede" x="625.565" y="0.881368" width="13.7583" height="75.7396"/>
+  <object id="125" name="parede" x="97.6552" y="242.368" width="12.8312" height="92.1452"/>
+  <object id="126" name="parede" x="112.788" y="242.349" width="77.4895" height="10.371"/>
+  <object id="127" name="parede" x="177.965" y="194.312" width="12.7092" height="45.4314"/>
+  <object id="128" name="parede" x="82.3163" y="193.821" width="92.9503" height="11.9336"/>
+  <object id="129" name="parede" x="0.363247" y="178.025" width="93.135" height="12.2843"/>
+  <object id="130" name="parede" x="33.1167" y="97.7167" width="13.3753" height="44.4818"/>
+  <object id="131" name="parede" x="48.166" y="129.496" width="78.6612" height="12.5416"/>
+  <object id="132" name="parede" x="113.263" y="145.728" width="76.7871" height="12.1111"/>
+  <object id="133" name="parede" x="177.272" y="129.402" width="12.656" height="14.9014"/>
+  <object id="134" name="parede" x="225.567" y="0.494805" width="12.7005" height="205.537"/>
+  <object id="136" name="parede" x="81.7129" y="81.89" width="142.003" height="11.8389"/>
+  <object id="138" name="parede" x="96.7198" y="33.3508" width="94.2273" height="11.9857"/>
+  <object id="139" name="parede" x="177.176" y="0" width="13.7711" height="31.151"/>
+  <object id="140" name="parede" x="239.185" y="0" width="31.0915" height="12.224"/>
+  <object id="141" name="parede" x="239.998" y="50.2032" width="31.6927" height="11.1593"/>
+  <object id="142" name="parede" x="322.094" y="34.8171" width="11.837" height="57.449"/>
+  <object id="143" name="parede" x="288.214" y="82.9919" width="31.151" height="8.92037"/>
+  <object id="144" name="parede" x="274.461" y="50.2694" width="11.3367" height="89.6928"/>
+  <object id="145" name="parede" x="369.297" y="1.18188" width="13.2828" height="93.1978"/>
+  <object id="146" name="parede" x="419.06" y="33.6232" width="123.697" height="12.7086"/>
+  <object id="147" name="parede" x="530.336" y="52.2212" width="11.2397" height="41.0034"/>
+  <object id="148" name="parede" x="385.525" y="81.718" width="60.7899" height="13.5632"/>
+  <object id="149" name="parede" x="432.998" y="99.1004" width="14.1978" height="27.4335"/>
   <object id="150" name="parede" x="479.31" y="48.9828" width="16.8284" height="78.132"/>
-  <object id="151" name="parede" x="385.217" y="656.405" width="13.7481" height="14.5568"/>
-  <object id="152" name="parede" x="336.867" y="720.191" width="14.5325" height="15.2472"/>
-  <object id="153" name="parede" x="768.791" y="705.182" width="14.2942" height="13.3413"/>
-  <object id="154" name="parede" x="608.696" y="592.496" width="15.2472" height="15.2472"/>
-  <object id="155" name="parede" x="384.546" y="561.047" width="14.5707" height="13.9698"/>
-  <object id="156" name="parede" x="208.572" y="560.827" width="15.1245" height="15.1245"/>
-  <object id="157" name="parede" x="80.9894" y="496.67" width="14.3927" height="14.3927"/>
-  <object id="158" name="parede" x="64.8891" y="193.448" width="14.6366" height="13.4169"/>
-  <object id="159" name="parede" x="16.3443" y="32.2006" width="14.8806" height="15.8564"/>
-  <object id="160" name="parede" x="96.114" y="48.057" width="16.3443" height="16.8321"/>
-  <object id="161" name="parede" x="385.257" y="97.2918" width="14.4359" height="13.9848"/>
-  <object id="162" name="parede" x="224.458" y="416.63" width="14.9346" height="14.056"/>
+  <object id="161" name="parede" x="386.138" y="97.8794" width="11.7918" height="11.3407"/>
  </objectgroup>
 </map>

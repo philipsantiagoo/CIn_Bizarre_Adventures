@@ -1,53 +1,46 @@
 import pygame as pg
-from sys import exit
+import os
 from pytmx.util_pygame import load_pygame
-import inventory as gc
+
+from player import Player  # supondo que Player tá num arquivo separado player.py
 
 def play():
-    # inicializando o pygame
     pg.init()
-    mapa_path = "mapa/map.tmx"
-
-    # cria uma janela temporária para permitir conversão de imagens
-    janela_temp = pg.display.set_mode((1, 1))
-
-    # carregando o mapa do game
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    mapa_path = os.path.join(base_path, 'mapa', 'map.tmx')
     mapa = load_pygame(mapa_path)
 
-    # definindo a fonte para o inventário
-    font = pg.font.SysFont("Papyrus", 30)
+    largura = mapa.width * mapa.tilewidth
+    altura = mapa.height * mapa.tileheight
+    screen = pg.display.set_mode((largura, altura))
+    pg.display.set_caption("Mapa com Player")
 
-    # criando a janela (screen) com o tamanho do mapa
-    janela_largura = mapa.width * mapa.tilewidth
-    janela_altura = mapa.height * mapa.tileheight
-    janela = pg.display.set_mode((janela_largura, janela_altura))
-
-    # definindo o título da janela
-    pg.display.set_caption('CIn Bizarre Adventures')
-
-    # definindo o clock (relógio) de exibição da janela (screen)
     clock = pg.time.Clock()
 
-    # definindo a variável de continuação para exibir o mapa
-    continuar = True
+    walls = []
+    for obj in mapa.objects:
+        if obj.name == "parede":
+            walls.append(pg.Rect(obj.x, obj.y, obj.width, obj.height))
 
-    while continuar:
-        for evento in pg.event.get():
-            if evento.type == pg.QUIT:
-                continuar = False
+    player = Player(position=(100, 100), speed=3)
 
-        janela.fill((0, 0, 0))  # definindo a cor de fundo da janela (preto)
+    running = True
+    while running:
+        for event in pg.event.get():
+            if event.type == pg.QUIT:
+                running = False
 
-        # desenha cada tile do mapa
-        for camada in mapa.visible_layers:
-            if hasattr(camada, 'tiles'):
-                for x, y, tile in camada.tiles():
-                    janela.blit(
-                        tile, (x * mapa.tilewidth, y * mapa.tileheight))
+        screen.fill((0, 0, 0))
 
-        gc.mostrar_inventario(janela, gc.imagens_itens, gc.inventario, font)
-        pg.display.flip()  # atualiza a janela de acordo com os novos conteúdos
-        clock.tick(60)  # definindo uma taxa de 60 FPS
+        for layer in mapa.visible_layers:
+            if hasattr(layer, 'tiles'):
+                for x, y, tile in layer.tiles():
+                    screen.blit(tile, (x * mapa.tilewidth, y * mapa.tileheight))
 
-    pg.quit()  # fecha o pygame
-    exit()  # encerra o programa
+        player.update(walls)
+        player.draw(screen)
+
+        pg.display.flip()
+        clock.tick(60)
+
+    pg.quit()
