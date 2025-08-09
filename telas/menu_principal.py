@@ -35,7 +35,7 @@ background = pg.image.load("Telas do Jogo/tela_inicial.jpg")
 background = pg.transform.scale(background, (800, 750))
 pg.display.set_caption("Main Menu")
 
-button_surface = pg.image.load("Botões/botao_start.png")
+button_surface = pg.image.load("Botões/botao_padrao.png")
 button_surface = pg.transform.scale(button_surface, (280, 100))
 
 main_button = bcs.Button(button_surface, 400, 600, "Play")
