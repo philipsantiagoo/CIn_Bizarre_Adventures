@@ -48,8 +48,4 @@ def play():
         pg.display.flip()  # atualiza a janela de acordo com os novos conteúdos
         clock.tick(60)  # definindo uma taxa de 60 FPS
 
-    pg.quit()  # fecha o pygame
-
-
-# chama a função para iniciar o jogo
-play()
+    return  # fecha o pygame e faz a tela voltar pro menu principal qnd for rodar dnv

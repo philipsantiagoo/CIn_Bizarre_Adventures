@@ -1,32 +1,7 @@
 import pygame as pg
 from sys import exit
 import button_class as bcs
-
-
-def play():
-    pg.display.set_caption("Game Screen")
-
-    while True:
-        play_mouse_pos = pg.mouse.get_pos()
-        screen.fill("#000000")  # Clear the screen with black
-
-        play_text = main_font.render("Game Screen", True, "white")
-        play_text_rect = play_text.get_rect(center=(400, 375))
-        screen.blit(play_text, play_text_rect)
-
-        back_button = bcs.Button(button_surface, 400, 650, "Back")
-        back_button.update()
-        back_button.changeColor(play_mouse_pos)
-        back_button.checkForInput(play_mouse_pos)
-
-        for event in pg.event.get():
-            if event.type == pg.QUIT:
-                pg.quit()
-                exit()
-            if event.type == pg.MOUSEBUTTONDOWN:
-                if back_button.checkForInput(play_mouse_pos):
-                    return
-            pg.display.update()
+from main import play
 
 
 pg.init()
@@ -49,6 +24,7 @@ while True:
         if event.type == pg.QUIT:
             pg.quit()
             exit()
+        
         if event.type == pg.MOUSEBUTTONDOWN:
             if main_button.checkForInput(mouse_pos):
                 play()
