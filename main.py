@@ -1,7 +1,7 @@
 import os
 import pygame as pg
 from pytmx.util_pygame import load_pygame
-
+from sys import exit
 
 def play():
     # definindo um caminho absoluto para acessar o mapa criado
@@ -49,4 +49,4 @@ def play():
         clock.tick(60)  # definindo uma taxa de 60 FPS
 
     pg.quit()  # fecha o pygame
-    return  # faz a tela voltar pro menu principal qnd for rodar dnv
+    exit()  # encerra o programa
