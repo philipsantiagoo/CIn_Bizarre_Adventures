@@ -23,7 +23,7 @@ def play():
         if obj.name == "parede":
             walls.append(pg.Rect(obj.x, obj.y, obj.width, obj.height))
 
-    player = Player(position=(100, 100), speed=3)
+    player = Player(position=(100, 100), speed=1.3)
 
     running = True
     while running:

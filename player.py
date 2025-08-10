@@ -37,6 +37,7 @@ class Player(pg.sprite.Sprite):
         self.image = self.images[self.direction][self.frame_index]
         self.rect = self.image.get_rect(topleft=position)
 
+
     def handle_input(self):
         keys = pg.key.get_pressed()
         directionX, directionY = 0, 0
@@ -62,6 +63,7 @@ class Player(pg.sprite.Sprite):
 
         return directionX, directionY
 
+
     def move(self, directionX, directionY, walls):
         # Movimento X
         self.rect.x += directionX
@@ -81,16 +83,16 @@ class Player(pg.sprite.Sprite):
                 elif directionY < 0:
                     self.rect.top = wall.bottom
 
+
     def animate(self):
         self.frame_index += self.animation_speed
         if self.frame_index >= len(self.images[self.direction]):
             self.frame_index = 0
         self.image = self.images[self.direction][int(self.frame_index)]
 
+
     def update(self, walls):
         directionX, directionY = self.handle_input()
-
-        print(f"Direção: {self.direction}, Move X: {directionX}, Move Y: {directionY}")
 
         if directionX != 0 or directionY != 0:
             self.move(directionX, directionY, walls)
@@ -99,8 +101,10 @@ class Player(pg.sprite.Sprite):
             self.frame_index = 0
             self.image = self.images[self.direction][self.frame_index]
 
+
     def draw(self, surface):
         surface.blit(self.image, self.rect)
+
 
 def main():
     pg.init()
@@ -143,6 +147,7 @@ def main():
 
     '''pg.quit()
     exit()'''
+
 
 if __name__ == "__main__":
     main()
