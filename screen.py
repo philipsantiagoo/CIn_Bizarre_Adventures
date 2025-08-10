@@ -4,7 +4,8 @@ import inventory as inv
 from pytmx.util_pygame import load_pygame
 
 from player import Player  
-from collision import Coletavel 
+from collision import Coletavel
+from lighting import Lighting 
 
 
 def play():
@@ -20,12 +21,16 @@ def play():
 
     clock = pg.time.Clock()
 
+    # escuro aqui
+    lighting = Lighting((largura, altura), light_radius=30)
+
     walls = []
     for obj in mapa.objects:
         if obj.name == "parede":
             walls.append(pg.Rect(obj.x, obj.y, obj.width, obj.height))
 
     player = Player(position=(380, 700), speed=1.4)
+
     coletaveis = [
         Coletavel((360, 608), 'flashlight.png'),
         Coletavel((772, 490), 'coin.png'),
@@ -59,6 +64,9 @@ def play():
                 coletaveis.remove(coletavel)
 
         inv.mostrar_inventario(screen, inv.imagens_itens, inv.inventario, inv.main_font)
+
+        # camuflagem
+        lighting.draw_light(screen, player.rect.center)
 
         pg.display.flip()
         clock.tick(60)
