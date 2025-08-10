@@ -17,6 +17,9 @@ class Coletavel(pg.sprite.Sprite):
         #atributo do retângulo do coletável
         self.rect = self.surface.get_rect(topleft = posicao_coletavel)
 
+        #atributo para verificar coletável:
+        self.coletado = False
+
         #caso seja a imagem dos corações, define o atributo tipo do coletável como 'vida'
         if nome_arquivo_coletavel == 'heart.png':
             self.tipo = 'vida'
@@ -37,12 +40,14 @@ class Coletavel(pg.sprite.Sprite):
     def colisao_coletavel(self, hitbox_player):
 
         #caso haja colisão com o player irá adicionar o coletável ao inventário
-        if self.rect.colliderect(hitbox_player):
+        if not self.coletado and self.rect.colliderect(hitbox_player):
             inv.coletar_item(self)
+            self.coletado = True
 
     #propriedade que adiciona o coletável na tela
     def add_to_screen(self, tela):
-        tela.blit(self.surface,self.rect)
+        if not self.coletado:
+            tela.blit(self.surface,self.rect)
 
 #Função main: sem ela o coletável não aparece na tela (basicamente só copiei do arquivo player e fiz algumas alterações kkkkk não sei muito sobre ela kkkk)
 def main():
