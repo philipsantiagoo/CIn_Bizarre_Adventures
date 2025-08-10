@@ -31,7 +31,7 @@ def play():
 
     player = Player(position=(380, 700), speed=1.4)
 
-    coletaveis = [
+    coletaveis = [ # posicao dos coletaveis no mapa
         Coletavel((360, 608), 'flashlight.png'),
         Coletavel((772, 490), 'coin.png'),
         Coletavel((385,20), 'coin.png'),
@@ -57,13 +57,22 @@ def play():
         player.update(walls)
         player.draw(screen)
 
+        item_pego = pg.mixer.Sound("sons/collectible.ogg")
+        canal_item_pego = pg.mixer.Channel(0)
+
         for coletavel in coletaveis[:]:  
             coletavel.add_to_screen(screen)
             coletavel.colisao_coletavel(player.rect)
             if getattr(coletavel, 'coletado', False): 
                 coletaveis.remove(coletavel)
+                pg.mixer.music.set_volume(0.4)  # abaixa o volume da musica
+                item_pego.play() # toca musiquinha de q pegou o coletavel
+                
 
         inv.mostrar_inventario(screen, inv.imagens_itens, inv.inventario, inv.main_font)
+
+        if not canal_item_pego.get_busy():
+            pg.mixer.music.set_volume(1.0) # volta o volume da musica
 
         # camuflagem
         lighting.draw_light(screen, player.rect.center)
