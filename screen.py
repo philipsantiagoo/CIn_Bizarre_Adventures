@@ -8,7 +8,7 @@ from collision import Coletavel
 from lighting import Lighting 
 
 
-def play():
+def play(screen):
     pg.init()
     base_path = os.path.dirname(os.path.abspath(__file__))
     mapa_path = os.path.join(base_path, 'mapa', 'map.tmx')
@@ -16,6 +16,8 @@ def play():
 
     largura = mapa.width * mapa.tilewidth
     altura = mapa.height * mapa.tileheight
+
+    # ajusta o tamanho da janela para o tamanho do mapa
     screen = pg.display.set_mode((largura, altura))
     pg.display.set_caption("Mapa com Player")
 
@@ -95,4 +97,4 @@ def play():
         pg.display.flip()
         clock.tick(60)
 
-    pg.quit()
+    return True

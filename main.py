@@ -45,7 +45,10 @@ while True:
             if main_button.checkForInput(mouse_pos): # se foi clicado, inicia o jogo
                 pg.mixer.music.load("sons/background.ogg")
                 pg.mixer.music.play(-1)  # toca a música em loop
-                play() # inicia o jogo
+                fechar = play(screen) # inicia o jogo
+                if fechar:
+                    pg.quit()
+                    exit()
 
     # atualiza a tela
     screen.blit(background, (0, 0))
