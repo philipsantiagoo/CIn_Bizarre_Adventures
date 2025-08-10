@@ -4,6 +4,8 @@ import inventory as inv
 from pytmx.util_pygame import load_pygame
 
 from player import Player  # supondo que Player tá num arquivo separado player.py
+from collision import Coletavel #importa a classe de coletáveis de collision.py
+
 
 def play():
     pg.init()
@@ -23,7 +25,9 @@ def play():
         if obj.name == "parede":
             walls.append(pg.Rect(obj.x, obj.y, obj.width, obj.height))
 
-    player = Player(position=(100, 100), speed=1.3)
+    player = Player(position=(100, 100), speed=3)
+    coletavel = Coletavel(posicao_coletavel=(170, 100), nome_arquivo_coletavel='flashlight.png')
+
 
     running = True
     while running:
@@ -40,6 +44,10 @@ def play():
 
         player.update(walls)
         player.draw(screen)
+
+        coletavel.add_to_screen(screen)
+        coletavel.colisao_coletavel(player.rect)
+
         inv.mostrar_inventario(screen, inv.imagens_itens, inv.inventario, inv.main_font)
 
         pg.display.flip()
