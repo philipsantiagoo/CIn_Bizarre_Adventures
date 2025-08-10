@@ -1,7 +1,7 @@
 import pygame
 
 class Lighting:
-    def __init__(self, screen_size, light_radius=150):
+    def __init__(self, screen_size, light_radius = 25):
         self.screen_width, self.screen_height = screen_size
         self.light_radius = light_radius
 
@@ -12,7 +12,7 @@ class Lighting:
     def _create_light_mask(self):
         """Cria um gradiente circular suave."""
         for r in range(self.light_radius, 0, -1):
-            alpha = int(255 * (r / self.light_radius))  # borda mais escura
+            alpha = int(255 * (1 - (r / self.light_radius)))  
             pygame.draw.circle(
                 self.light_surface,
                 (0, 0, 0, alpha),
@@ -27,7 +27,7 @@ class Lighting:
         """
         # Camada preta sobre tudo
         dark_surface = pygame.Surface((self.screen_width, self.screen_height), pygame.SRCALPHA)
-        dark_surface.fill((0, 0, 0, 200))  # 200 = opacidade da escuridão
+        dark_surface.fill((0, 0, 0, 255))  # 200 = opacidade da escuridão
 
         # Posição da luz (centraliza no player)
         light_x = player_pos[0] - self.light_radius
