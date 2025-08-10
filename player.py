@@ -3,6 +3,9 @@ import os
 from pytmx.util_pygame import load_pygame
 from sys import exit
 
+
+
+# definindo a classe player que controla o personagem principal
 class Player(pg.sprite.Sprite):
     def __init__(self, position, speed):
         super().__init__()
@@ -11,6 +14,7 @@ class Player(pg.sprite.Sprite):
         self.frame_index = 0
         self.animation_speed = 0.15
 
+        # coletando as imagens da pasta
         self.images = {
             'down': [
                 pg.image.load(os.path.join('personagem', 'frente', 'f1.png')).convert_alpha(),
@@ -38,6 +42,7 @@ class Player(pg.sprite.Sprite):
         self.rect = self.image.get_rect(topleft=position)
 
 
+    # função para controlar o personagem por meio dos botões (W, A, S, D) do teclado
     def handle_input(self):
         keys = pg.key.get_pressed()
         directionX, directionY = 0, 0
@@ -64,6 +69,8 @@ class Player(pg.sprite.Sprite):
         return directionX, directionY
 
 
+    # função para controlar os movimentos no plano cartesiano
+    # walls são as paredes atribuídas pelo mapa no tiled
     def move(self, directionX, directionY, walls):
         # Movimento X
         self.rect.x += directionX
@@ -84,6 +91,7 @@ class Player(pg.sprite.Sprite):
                     self.rect.top = wall.bottom
 
 
+    # controla a animação do personagem
     def animate(self):
         self.frame_index += self.animation_speed
         if self.frame_index >= len(self.images[self.direction]):
@@ -91,63 +99,26 @@ class Player(pg.sprite.Sprite):
         self.image = self.images[self.direction][int(self.frame_index)]
 
 
+    # captura o movimento do personagem por frame
     def update(self, walls):
         directionX, directionY = self.handle_input()
 
         if directionX != 0 or directionY != 0:
             self.move(directionX, directionY, walls)
+
+            if self.rect.right > 800:
+                self.rect.right = 800
+            if self.rect.bottom > 750:
+                self.rect.bottom = 750
+
             self.animate()
         else:
             self.frame_index = 0
             self.image = self.images[self.direction][self.frame_index]
 
 
+
+    # desenha o personagem na tela
     def draw(self, surface):
         surface.blit(self.image, self.rect)
 
-
-def main():
-    pg.init()
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    mapa_path = os.path.join(base_path, 'mapa', 'map.tmx')
-    mapa = load_pygame(mapa_path)
-
-    largura = mapa.width * mapa.tilewidth
-    altura = mapa.height * mapa.tileheight
-    screen = pg.display.set_mode((largura, altura))
-    pg.display.set_caption("Mapa com Player")
-
-    clock = pg.time.Clock()
-
-    walls = []
-    for obj in mapa.objects:
-        if obj.name == "parede":
-            walls.append(pg.Rect(obj.x, obj.y, obj.width, obj.height))
-
-    player = Player(position=(100, 100), speed=3)
-
-    running = True
-    while running:
-        for event in pg.event.get():
-            if event.type == pg.QUIT:
-                running = False
-
-        screen.fill((0, 0, 0))
-
-        for layer in mapa.visible_layers:
-            if hasattr(layer, 'tiles'):
-                for x, y, tile in layer.tiles():
-                    screen.blit(tile, (x * mapa.tilewidth, y * mapa.tileheight))
-
-        player.update(walls)
-        player.draw(screen)
-
-        pg.display.flip()
-        clock.tick(60)
-
-    '''pg.quit()
-    exit()'''
-
-
-if __name__ == "__main__":
-    main()
