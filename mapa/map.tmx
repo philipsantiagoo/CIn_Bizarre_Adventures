@@ -113,7 +113,7 @@
 </data>
  </layer>
  <objectgroup id="3" name="colisão">
-  <object id="3" name="parede" x="421.111" y="691.925" width="38.5229" height="7.41867"/>
+  <object id="3" name="parede" x="426.365" y="691.925" width="29.4481" height="7.41867"/>
   <object id="4" name="parede" x="501.512" y="646.351" width="3.7076" height="87.568"/>
   <object id="5" name="parede" x="515.209" y="692.267" width="20.5376" height="5.44669"/>
   <object id="6" name="parede" x="513.427" y="646.015" width="71.6255" height="3.71019"/>
@@ -133,7 +133,7 @@
   <object id="20" name="parede" x="372.21" y="659.748" width="7.49507" height="37.8497"/>
   <object id="21" name="parede" x="322.817" y="647.404" width="10.066" height="82.6878"/>
   <object id="22" name="parede" x="402.211" y="559.759" width="10.6841" height="79.2637"/>
-  <object id="23" name="parede" x="496.217" y="560.414" width="15.0667" height="30.1333"/>
+  <object id="23" name="parede" x="499.786" y="570.101" width="9.20369" height="18.6622"/>
   <object id="24" name="parede" x="275.288" y="596.047" width="85.3418" height="8.20093"/>
   <object id="25" name="parede" x="275.11" y="613.614" width="9.14" height="35.0902"/>
   <object id="26" name="parede" x="211.077" y="643.777" width="60.5072" height="7.49244"/>
@@ -181,7 +181,7 @@
   <object id="70" name="parede" x="418.984" y="379.179" width="9.87053" height="82.7807"/>
   <object id="71" name="parede" x="467.593" y="384.117" width="10.1085" height="30.8545"/>
   <object id="72" name="parede" x="468.271" y="372.13" width="86.567" height="9.67581"/>
-  <object id="73" name="parede" x="548.104" y="386.383" width="7.90399" height="164.937"/>
+  <object id="73" name="parede" x="548.104" y="386.383" width="7.90399" height="158.8"/>
   <object id="74" name="parede" x="596.98" y="408.906" width="6.50913" height="163.341"/>
   <object id="75" name="parede" x="739.348" y="543.312" width="8.98424" height="59.033"/>
   <object id="76" name="parede" x="787.932" y="543.312" width="10.1907" height="95.8347"/>
