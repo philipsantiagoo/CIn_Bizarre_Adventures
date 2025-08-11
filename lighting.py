@@ -19,22 +19,3 @@ class Lighting:
                 (self.light_radius, self.light_radius),
                 r
             )
-
-    def draw_light(self, target_surface, player_pos):
-        """
-        Desenha a máscara de luz sobre a tela.
-        player_pos: posição do jogador no mundo.
-        """
-        # Camada preta sobre tudo
-        dark_surface = pygame.Surface((self.screen_width, self.screen_height), pygame.SRCALPHA)
-        dark_surface.fill((0, 0, 0, 255))  # 200 = opacidade da escuridão
-
-        # Posição da luz (centraliza no player)
-        light_x = player_pos[0] - self.light_radius
-        light_y = player_pos[1] - self.light_radius
-
-        # "Fura" o buraco da luz
-        dark_surface.blit(self.light_surface, (light_x, light_y), special_flags=pygame.BLEND_RGBA_SUB)
-
-        # Desenha por cima da tela final
-        target_surface.blit(dark_surface, (0, 0))

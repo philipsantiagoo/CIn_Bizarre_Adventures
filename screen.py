@@ -4,6 +4,7 @@ import inventory as inv
 from pytmx.util_pygame import load_pygame
 
 from player import Player  
+from player2 import Player2
 from collision import Coletavel
 from lighting import Lighting 
 
@@ -17,14 +18,14 @@ def play(screen):
     largura = mapa.width * mapa.tilewidth
     altura = mapa.height * mapa.tileheight
 
-    # ajusta o tamanho da janela para o tamanho do mapa
     screen = pg.display.set_mode((largura, altura))
     pg.display.set_caption("Mapa com Player")
 
     clock = pg.time.Clock()
 
-    # escuro aqui
-    lighting = Lighting((largura, altura), light_radius = 25)
+    # Duas luzes independentes
+    lighting1 = Lighting((largura, altura), light_radius=25)  # player 1, raio variável
+    lighting2 = Lighting((largura, altura), light_radius=80)  # player 2, raio fixo
 
     walls = []
     for obj in mapa.objects:
@@ -32,8 +33,9 @@ def play(screen):
             walls.append(pg.Rect(obj.x, obj.y, obj.width, obj.height))
 
     player = Player(position=(380, 700), speed=1.3)
+    player2 = Player2(position=(420, 70), speed=1.45)
 
-    coletaveis = [ # posicao dos coletaveis no mapa
+    coletaveis = [
         Coletavel((360, 608), 'flashlight.png'),
         Coletavel((740, 710), 'flashlight.png'),
         Coletavel((430, 285), 'flashlight.png'),
@@ -67,6 +69,9 @@ def play(screen):
         player.update(walls)
         player.draw(screen)
 
+        player2.update(walls)
+        player2.draw(screen)
+
         item_pego = pg.mixer.Sound("sons/collectible.ogg")
         canal_item_pego = pg.mixer.Channel(0)
 
@@ -75,41 +80,53 @@ def play(screen):
             coletavel.colisao_coletavel(player.rect)
             if getattr(coletavel, 'coletado', False): 
                 coletaveis.remove(coletavel)
-                pg.mixer.music.set_volume(0.2)  # abaixa o volume da musica
-                item_pego.play() # toca musiquinha de q pegou o coletavel
+                pg.mixer.music.set_volume(0.2)
+                item_pego.play()
                 
-
         if not canal_item_pego.get_busy():
-            pg.mixer.music.set_volume(1.0) # volta o volume da musica
+            pg.mixer.music.set_volume(1.0)
+
+        # Ajusta o raio do lighting1 conforme lanterna
+        lanterna = inv.inventario.get('lanterna', 0)
+        if lanterna == 1 and lighting1.light_radius != 60:
+            lighting1.light_radius = 60
+            lighting1.light_surface = pg.Surface((lighting1.light_radius * 2, lighting1.light_radius * 2), pg.SRCALPHA)
+            lighting1._create_light_mask()
+        elif lanterna == 2 and lighting1.light_radius != 70:
+            lighting1.light_radius = 70
+            lighting1.light_surface = pg.Surface((lighting1.light_radius * 2, lighting1.light_radius * 2), pg.SRCALPHA)
+            lighting1._create_light_mask()
+        elif lanterna == 3 and lighting1.light_radius != 75:
+            lighting1.light_radius = 75
+            lighting1.light_surface = pg.Surface((lighting1.light_radius * 2, lighting1.light_radius * 2), pg.SRCALPHA)
+            lighting1._create_light_mask()
+        elif lanterna == 0 and lighting1.light_radius != 25:
+            lighting1.light_radius = 25
+            lighting1.light_surface = pg.Surface((lighting1.light_radius * 2, lighting1.light_radius * 2), pg.SRCALPHA)
+            lighting1._create_light_mask()
 
 
-        # iluminação, se pegou a lanterna teve sorte e a visão aumenta
-        if inv.inventario.get('lanterna', 0) == 1:
-            if lighting.light_radius != 60:
-                lighting.light_radius = 60
-                lighting.light_surface = pg.Surface((lighting.light_radius * 2, lighting.light_radius * 2), pg.SRCALPHA)
-                lighting._create_light_mask()
-        elif inv.inventario.get('lanterna', 0) == 2:
-            if lighting.light_radius != 75:
-                lighting.light_radius = 75
-                lighting.light_surface = pg.Surface((lighting.light_radius * 2, lighting.light_radius * 2), pg.SRCALPHA)
-                lighting._create_light_mask()
-        elif inv.inventario.get('lanterna', 0) == 3:
-            if lighting.light_radius != 85:
-                lighting.light_radius = 85
-                lighting.light_surface = pg.Surface((lighting.light_radius * 2, lighting.light_radius * 2), pg.SRCALPHA)
-                lighting._create_light_mask()
-        else:
-            if lighting.light_radius != 25:
-                lighting.light_radius = 25
-                lighting.light_surface = pg.Surface((lighting.light_radius * 2, lighting.light_radius * 2), pg.SRCALPHA)
-                lighting._create_light_mask()
+        # Surface única pra sombra
+        dark_surface = pg.Surface((largura, altura), pg.SRCALPHA)
+        dark_surface.fill((0, 0, 0, 255))  # opacidade sombra (ajuste)
 
 
-        # camuflagem
-        lighting.draw_light(screen, player.rect.center)
+        # Furo da luz player 1
+        lx1 = player.rect.centerx - lighting1.light_radius
+        ly1 = player.rect.centery - lighting1.light_radius
+        dark_surface.blit(lighting1.light_surface, (lx1, ly1), special_flags=pg.BLEND_RGBA_SUB)
 
-        # inventário
+        # Furo da luz player 2 (raio fixo)
+        lx2 = player2.rect.centerx - lighting2.light_radius
+        ly2 = player2.rect.centery - lighting2.light_radius
+        dark_surface.blit(lighting2.light_surface, (lx2, ly2), special_flags=pg.BLEND_RGBA_SUB)
+
+
+        # Aplica sombra no screen
+        screen.blit(dark_surface, (0, 0))
+
+
+        # Inventário
         inv.mostrar_inventario(screen, inv.imagens_itens, inv.inventario, inv.main_font)
 
         pg.display.flip()

@@ -3,7 +3,7 @@ import os
 
 
 # definindo a classe player que controla o personagem principal
-class Player(pg.sprite.Sprite):
+class Player2(pg.sprite.Sprite):
     def __init__(self, position, speed):
         super().__init__()
         self.speed = speed
@@ -14,24 +14,24 @@ class Player(pg.sprite.Sprite):
         # coletando as imagens da pasta
         self.images = {
             'down': [
-                pg.image.load(os.path.join('personagens','player_1', 'frente', 'f1.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagens', 'player_1', 'frente', 'f2.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagens', 'player_1', 'frente', 'f3.png')).convert_alpha()
+                pg.image.load(os.path.join('personagens','player_2', 'frenteV', 'fV1.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_2', 'frenteV', 'fV2.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_2', 'frenteV', 'fV3.png')).convert_alpha()
             ],
             'up': [
-                pg.image.load(os.path.join('personagens', 'player_1', 'costas', 'c1.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagens', 'player_1', 'costas', 'c2.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagens', 'player_1', 'costas', 'c3.png')).convert_alpha()
+                pg.image.load(os.path.join('personagens', 'player_2', 'costasV', 'cV1.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_2', 'costasV', 'cV2.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_2', 'costasV', 'cV3.png')).convert_alpha()
             ],
             'left': [
-                pg.image.load(os.path.join('personagens', 'player_1', 'esquerda', 'e1.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagens', 'player_1', 'esquerda', 'e2.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagens', 'player_1', 'esquerda', 'e3.png')).convert_alpha()
+                pg.image.load(os.path.join('personagens', 'player_2', 'esquerdaV', 'eV1.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_2', 'esquerdaV', 'eV2.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_2', 'esquerdaV', 'eV3.png')).convert_alpha()
             ],
             'right': [
-                pg.image.load(os.path.join('personagens', 'player_1', 'direita', 'd1.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagens', 'player_1', 'direita', 'd2.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagens', 'player_1', 'direita', 'd3.png')).convert_alpha()
+                pg.image.load(os.path.join('personagens', 'player_2', 'direitaV', 'dV1.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_2', 'direitaV', 'dV2.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_2', 'direitaV', 'dV3.png')).convert_alpha()
             ]
         }
 
@@ -47,16 +47,16 @@ class Player(pg.sprite.Sprite):
         # Reset direction só se alguma tecla for pressionada
         # para evitar erro de direção errada
 
-        if keys[pg.K_w]:
+        if keys[pg.K_UP]:
             directionY = -self.speed
             self.direction = 'up'
-        elif keys[pg.K_s]:
+        elif keys[pg.K_DOWN]:
             directionY = self.speed
             self.direction = 'down'
-        elif keys[pg.K_a]:
+        elif keys[pg.K_LEFT]:
             directionX = -self.speed
             self.direction = 'left'
-        elif keys[pg.K_d]:
+        elif keys[pg.K_RIGHT]:
             directionX = self.speed
             self.direction = 'right'
         else:
