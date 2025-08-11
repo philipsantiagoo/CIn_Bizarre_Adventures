@@ -17,24 +17,24 @@ class Player(pg.sprite.Sprite):
         # coletando as imagens da pasta
         self.images = {
             'down': [
-                pg.image.load(os.path.join('personagem', 'frente', 'f1.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagem', 'frente', 'f2.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagem', 'frente', 'f3.png')).convert_alpha()
+                pg.image.load(os.path.join('personagens','player_1', 'frente', 'f1.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_1', 'frente', 'f2.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_1', 'frente', 'f3.png')).convert_alpha()
             ],
             'up': [
-                pg.image.load(os.path.join('personagem', 'costas', 'c1.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagem', 'costas', 'c2.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagem', 'costas', 'c3.png')).convert_alpha()
+                pg.image.load(os.path.join('personagens', 'player_1', 'costas', 'c1.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_1', 'costas', 'c2.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_1', 'costas', 'c3.png')).convert_alpha()
             ],
             'left': [
-                pg.image.load(os.path.join('personagem', 'esquerda', 'e1.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagem', 'esquerda', 'e2.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagem', 'esquerda', 'e3.png')).convert_alpha()
+                pg.image.load(os.path.join('personagens', 'player_1', 'esquerda', 'e1.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_1', 'esquerda', 'e2.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_1', 'esquerda', 'e3.png')).convert_alpha()
             ],
             'right': [
-                pg.image.load(os.path.join('personagem', 'direita', 'd1.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagem', 'direita', 'd2.png')).convert_alpha(),
-                pg.image.load(os.path.join('personagem', 'direita', 'd3.png')).convert_alpha()
+                pg.image.load(os.path.join('personagens', 'player_1', 'direita', 'd1.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_1', 'direita', 'd2.png')).convert_alpha(),
+                pg.image.load(os.path.join('personagens', 'player_1', 'direita', 'd3.png')).convert_alpha()
             ]
         }
 
