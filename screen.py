@@ -40,8 +40,12 @@ def play(screen):
         Coletavel((338,360), 'coin.png'),
         Coletavel((1, 335), 'heart.png'),
         Coletavel((700,224), 'heart.png'),
-        Coletavel((170,98), 'heart.png')
+        Coletavel((170,98), 'heart.png'),
+        Coletavel((650,1), 'gasoline.png')
     ]
+    
+    generator_img = pg.image.load("coletaveis/generator.png").convert_alpha()
+    generator_rect = generator_img.get_rect(topleft=(33, 33))
 
     running = True
     while running:
@@ -55,6 +59,8 @@ def play(screen):
             if hasattr(layer, 'tiles'):
                 for x, y, tile in layer.tiles():
                     screen.blit(tile, (x * mapa.tilewidth, y * mapa.tileheight))
+        
+        screen.blit(generator_img, generator_rect)
 
         player.update(walls)
         player.draw(screen)
