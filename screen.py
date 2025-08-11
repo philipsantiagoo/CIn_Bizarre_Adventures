@@ -129,7 +129,12 @@ def play(screen):
         # Inventário
         inv.mostrar_inventario(screen, inv.imagens_itens, inv.inventario, inv.main_font)
 
+        #lógica de vitória
+        if inv.inventario.get('gasolina') > 0 and player.rect.colliderect(generator_rect):
+            running = False
+            vitoria = 1
+        
         pg.display.flip()
         clock.tick(60)
 
-    return True
+    return [True, vitoria]

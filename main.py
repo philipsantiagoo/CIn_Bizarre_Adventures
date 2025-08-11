@@ -23,11 +23,15 @@ pg.display.set_caption("Main Menu")
 button_surface = pg.image.load("buttons/botao_padrao.png")
 button_surface = pg.transform.scale(button_surface, (280, 100))
 
+#cria a tela de vitória
+tela_vitoria = pg.image.load("telas/tela_vitoria.png")
+tela_vitoria = pg.transform.scale(tela_vitoria, (800, 750))
 
 # criacao do botao funcional em si
 main_button = button.Button(button_surface, 400, 600, "Play")
 main_font = pg.font.SysFont("Papyrus", 65)
 
+vitoria = 0
 
 # game loop
 while True:
@@ -46,12 +50,18 @@ while True:
                 pg.mixer.music.load("sons/background.ogg")
                 pg.mixer.music.play(-1)  # toca a música em loop
                 fechar = play(screen) # inicia o jogo
-                if fechar:
-                    pg.quit()
-                    exit()
+                if fechar[0]:
+                    if fechar[1] == 1:
+                        vitoria = 1
+                        screen.blit(tela_vitoria, (0,0))
+                        pg.display.update()
+                    else:
+                        pg.quit()
+                        exit()
 
-    # atualiza a tela
-    screen.blit(background, (0, 0))
-    main_button.update()
-    main_button.changeColor(mouse_pos)
-    pg.display.update()
+    if vitoria == 0:
+        # atualiza a tela
+        screen.blit(background, (0, 0))
+        main_button.update()
+        main_button.changeColor(mouse_pos)
+        pg.display.update()
