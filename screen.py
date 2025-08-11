@@ -35,6 +35,8 @@ def play(screen):
 
     coletaveis = [ # posicao dos coletaveis no mapa
         Coletavel((360, 608), 'flashlight.png'),
+        Coletavel((460, 700), 'flashlight.png'),
+        Coletavel((380, 300), 'flashlight.png'),
         Coletavel((772, 490), 'coin.png'),
         Coletavel((385,20), 'coin.png'),
         Coletavel((338,360), 'coin.png'),
@@ -82,9 +84,19 @@ def play(screen):
 
 
         # iluminação, se pegou a lanterna teve sorte e a visão aumenta
-        if inv.inventario.get('lanterna', 0) > 0:
+        if 0 < inv.inventario.get('lanterna', 0) == 1:
             if lighting.light_radius != 60:
                 lighting.light_radius = 60
+                lighting.light_surface = pg.Surface((lighting.light_radius * 2, lighting.light_radius * 2), pg.SRCALPHA)
+                lighting._create_light_mask()
+        elif 1 < inv.inventario.get('lanterna', 0) == 2:
+            if lighting.light_radius != 75:
+                lighting.light_radius = 75
+                lighting.light_surface = pg.Surface((lighting.light_radius * 2, lighting.light_radius * 2), pg.SRCALPHA)
+                lighting._create_light_mask()
+        elif 2 < inv.inventario.get('lanterna', 0) == 3:
+            if lighting.light_radius != 85:
+                lighting.light_radius = 85
                 lighting.light_surface = pg.Surface((lighting.light_radius * 2, lighting.light_radius * 2), pg.SRCALPHA)
                 lighting._create_light_mask()
         else:
