@@ -24,7 +24,7 @@ def play(screen):
 
     clock = pg.time.Clock()
 
-    img_derrota = pg.image.load("telas/nao_grita_fernanda.jpg").convert()  # abre a imagem
+    img_derrota = pg.image.load("telas/tela_derrota.jpg").convert()  # abre a imagem
     img_derrota = pg.transform.scale(img_derrota, (largura, altura))
 
     # Duas luzes independentes

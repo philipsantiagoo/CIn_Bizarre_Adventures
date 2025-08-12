@@ -24,7 +24,7 @@ button_surface = pg.image.load("buttons/botao_padrao.png")
 button_surface = pg.transform.scale(button_surface, (280, 100))
 
 #cria a tela de vitória
-tela_vitoria = pg.image.load("telas/tela_vitoria.png")
+tela_vitoria = pg.image.load("telas/tela_vitoria.jpg")
 tela_vitoria = pg.transform.scale(tela_vitoria, (800, 750))
 
 # criacao do botao funcional em si
@@ -65,7 +65,7 @@ while executando:
                         musica_vitoria.play(0)
                         screen.blit(tela_vitoria, (0,0))
                         pg.display.update()
-                        pg.time.delay(3000)
+                        pg.time.delay(6000)
                         vitoria = 0
                     else:
                         vitoria = 0
