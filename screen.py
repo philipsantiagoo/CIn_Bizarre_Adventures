@@ -36,8 +36,8 @@ def play(screen):
         if obj.name == "parede":
             walls.append(pg.Rect(obj.x, obj.y, obj.width, obj.height))
 
-    player = Player(position=(380, 700), speed=2)
-    player2 = Player2(position=(420, 70), speed=1.5)
+    player = Player(position=(380, 700), speed=1.3)
+    player2 = Player2(position=(420, 70), speed=1.45)
     
     #Lista original de coletáveis:
     coletaveis_originais = [
@@ -109,9 +109,9 @@ def play(screen):
                 #Tela de derrota
                 screen.blit(img_derrota, (0, 0))
                 quadrado_texto = pg.Rect(0, 600, largura, 300)
-                pg.draw.rect(screen, "#656565", quadrado_texto)
+                pg.draw.rect(screen, "#000000", quadrado_texto)
                 fonte = pg.font.SysFont("Papyrus", 45, bold=True)
-                texto = fonte.render("Fala baixo que eu tô fazendo chamada...", True, "#FF2F2F")
+                texto = fonte.render("Fala baixo que eu tô fazendo chamada...", True, "#FFFFFF")
                 screen.blit(texto, (quadrado_texto.x + 20, quadrado_texto.y + 10))
                 pg.display.update()
 

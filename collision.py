@@ -10,7 +10,7 @@ class Coletavel(pg.sprite.Sprite):
 
 
     #atributos iniciais dos coletáveis
-    def __init__(self, posicao_coletavel, nome_arquivo_coletavel):  #COLOCAR A EXTENSÃO DO ARQUIVO NO NOME
+    def __init__(self, posicao_coletavel, nome_arquivo_coletavel): 
         super().__init__()
 
 
