@@ -118,3 +118,10 @@ class Player2(pg.sprite.Sprite):
     # desenha o personagem na tela
     def draw(self, surface):
         surface.blit(self.image, self.rect)
+
+    
+    #Golpe
+    def hit(self):
+        keys = pg.key.get_pressed()
+        if keys[pg.K_k]:
+            return True

@@ -59,7 +59,10 @@ while executando:
                 fechar = play(screen) # inicia o jogo
                 if fechar[0]:
                     if fechar[1] == 1:
+                        pg.mixer.music.stop()
                         vitoria = 1
+                        musica_vitoria = pg.mixer.Sound("sons/victory.ogg")
+                        musica_vitoria.play(0)
                         screen.blit(tela_vitoria, (0,0))
                         pg.display.update()
                         pg.time.delay(3000)

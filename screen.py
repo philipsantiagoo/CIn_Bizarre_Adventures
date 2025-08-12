@@ -81,7 +81,7 @@ def play(screen):
         player2.draw(screen)
 
         # --- Colisão entre Player e Player2 ---
-        if player.rect.colliderect(player2.rect):
+        if player.rect.colliderect(player2.rect) and player2.hit():
             # Reduz 1 de vida
             inv.inventario["vida"] -= 1
 
@@ -101,6 +101,10 @@ def play(screen):
 
             # Verifica se a vida acabou
             if inv.inventario["vida"] <= 0:
+
+                pg.mixer.music.stop()
+                musica_derrota = pg.mixer.Sound('sons/defeat.ogg')
+                musica_derrota.play(0)
 
                 #Tela de derrota
                 screen.blit(img_derrota, (0, 0))
@@ -170,7 +174,7 @@ def play(screen):
         inv.mostrar_inventario(screen, inv.imagens_itens, inv.inventario, inv.main_font)
 
         #lógica de vitória
-        if inv.inventario.get('gasolina') > 0 and player.rect.colliderect(generator_rect):
+        if inv.inventario.get('gasolina') > 0 and player.rect.colliderect(generator_rect) and player.interact():
             running = False
             vitoria = 1
         

@@ -118,3 +118,9 @@ class Player(pg.sprite.Sprite):
     # desenha o personagem na tela
     def draw(self, surface):
         surface.blit(self.image, self.rect)
+
+    #interação
+    def interact(self):
+        keys = pg.key.get_pressed()
+        if keys[pg.K_e]:
+            return True
