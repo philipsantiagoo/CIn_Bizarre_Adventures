@@ -14,10 +14,7 @@
 
 
 ### 📌 Descrição
-• Este é um projeto pra disciplina de Introdução à Programação, mais conhecida como IP para os íntimos, e o nosso projeto
-consiste de um jogo baseado no estilo Pac-man, onde o jogador precisa cumprir alguns objetivos antes de sair do labirinto
-enquanto é perseguido por alguns inimigos. Esse projeto usa alguns conceitos de POO em Python e fazer esse jogo tá sendo
-um desafio interessante.
+• Este é o relatório do projeto final da disciplina de Introdução a Programação [ IP ] que irá abordar todo o processo de desenvolvimento, desafios, erros e vitórias durante a criação do jogo.
 
 
 #
@@ -51,10 +48,49 @@ um desafio interessante.
 
 
 ### 📌 Etapa II - *Programação inicial*
-• Foi realizada a primeira etapa da programação que visa estabelecer 85% dos requisitos mínimos do game.
+• Foi realizada a primeira etapa da programação que estabeleceu 85% dos requisitos mínimos do game.
 
 | Responsável(s)                             | Responsabilidade     |
 |-------------------------------------------|-------------|
 | Luiz Philip Santiago da Silva e Felipe Augusto Lira Dias           | `movimentação do personagem no mapa`    |
 | Arthur Dias de Oliveira                   | `Interface com o o usuário (menu inicial, texto, afins)`     |
 | Gabriel André Souza Fernandes da Cunha e Andreson Gomes de Lima    | `Mecânica de colisão com os coletáveis`   |
+
+
+# 
+
+
+### 📌 Etapa III - *Programação média*
+• Foi realizada a segunda etapa da programação estabeleceu 100% dos requisitos mínimos do game.
+
+| Responsável(s)                             | Responsabilidade     |
+|-------------------------------------------|-------------|
+| Luiz Philip Santiago da Silva e Felipe Augusto Lira Dias           | `Lógica de colisão com o mapa, iluminação (efeito lanterna)`    |
+| Arthur Dias de Oliveira                   | `Inventário, capas de vitória e derrota`     |
+| Gabriel André Souza Fernandes da Cunha e Andreson Gomes de Lima    | `Lógica de vitória e derrota`   |
+
+
+#
+
+
+### 📌 Etapa IV - *Programação final*
+• Foi realizada a terceira etapa de programação do jogo, a qual cada membro ficou livre para corrigir e fazer alterações que considerou necessárias (após aval do grupo). Não foi estabelecido nenhum tipo de divisão, a intenção era simplesmente avaliar as funcionalidades atuais e verificar ocorrências de erros, bugs ou duplicidade nos códigos.
+
+
+# 
+
+
+### 📌 Etapa IV - *Programação adicional*
+• Nesse ponto cada membro avaliava o que poderiam acrescentar na jogabilidade do game para deixá-lo mais interativo, dinâmico e divertido. Importante ressaltar que essa etapa não significou o necessariamente no incremento dessas ideias, mas sim uma análise que se baseou na dificuldade de execução, experiência do game e tempo, lgumas delas foram:
+
+| Idealizador(s)         | Ideia(s)       | Avaliação           |
+|------------------|-----------------|--------------------|
+| Gabriel          | Mecânica de tecla para eliminação do player 1         | `Positiva`           |
+| Philip           | Mecânica de furto   | `Positiva`     |
+| Felipe           | Mecânica de zoom | `Em análise` |
+| Andreson | Score com moedas | `Em processamento` |
+
+
+<br>
+
+<h1 align="center" style="margin-top: 20px;">Arquitetura do Projeto</h1>
