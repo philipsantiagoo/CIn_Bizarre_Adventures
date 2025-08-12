@@ -33,8 +33,10 @@ main_font = pg.font.SysFont("Papyrus", 65)
 
 vitoria = 0
 
+executando = True
+
 # game loop
-while True:
+while executando:
     # verifica a posicao do mouse
     mouse_pos = pg.mouse.get_pos()
 
@@ -46,6 +48,11 @@ while True:
         
         # se o evento for de clique do mouse, verifica se o botao foi clicado
         if event.type == pg.MOUSEBUTTONDOWN:
+            if event.type == pg.QUIT:  # fechar a janela
+                executando = False
+            if event.type == pg.KEYDOWN:  # opcional: sair ao apertar ESC
+                if event.key == pg.K_ESCAPE:
+                    executando = False 
             if main_button.checkForInput(mouse_pos): # se foi clicado, inicia o jogo
                 pg.mixer.music.load("sons/background.ogg")
                 pg.mixer.music.play(-1)  # toca a música em loop
@@ -55,9 +62,10 @@ while True:
                         vitoria = 1
                         screen.blit(tela_vitoria, (0,0))
                         pg.display.update()
+                        pg.time.delay(3000)
+                        vitoria = 0
                     else:
-                        pg.quit()
-                        exit()
+                        vitoria = 0
 
     if vitoria == 0:
         # atualiza a tela
@@ -65,3 +73,6 @@ while True:
         main_button.update()
         main_button.changeColor(mouse_pos)
         pg.display.update()
+
+pg.quit()
+exit()

@@ -11,6 +11,7 @@ from lighting import Lighting
 
 def play(screen):
     pg.init()
+    inv.resetar_inventario()
     base_path = os.path.dirname(os.path.abspath(__file__))
     mapa_path = os.path.join(base_path, 'mapa', 'map.tmx')
     mapa = load_pygame(mapa_path)
@@ -23,6 +24,9 @@ def play(screen):
 
     clock = pg.time.Clock()
 
+    img_derrota = pg.image.load("telas/nao_grita_fernanda.jpg").convert()  # abre a imagem
+    img_derrota = pg.transform.scale(img_derrota, (largura, altura))
+
     # Duas luzes independentes
     lighting1 = Lighting((largura, altura), light_radius=25)  # player 1, raio variável
     lighting2 = Lighting((largura, altura), light_radius=80)  # player 2, raio fixo
@@ -34,19 +38,23 @@ def play(screen):
 
     player = Player(position=(380, 700), speed=1.3)
     player2 = Player2(position=(420, 70), speed=1.45)
-
-    coletaveis = [
-        Coletavel((360, 608), 'flashlight.png'),
-        Coletavel((740, 710), 'flashlight.png'),
-        Coletavel((430, 285), 'flashlight.png'),
-        Coletavel((772, 490), 'coin.png'),
-        Coletavel((385,20), 'coin.png'),
-        Coletavel((338,360), 'coin.png'),
-        Coletavel((1, 335), 'heart.png'),
-        Coletavel((700,224), 'heart.png'),
-        Coletavel((170,98), 'heart.png'),
-        Coletavel((650,1), 'gasoline.png')
-    ]
+    
+    #Lista original de coletáveis:
+    coletaveis_originais = [
+    ("flashlight.png", (360, 608)),
+    ("flashlight.png", (740, 710)),
+    ("flashlight.png", (430, 285)),
+    ("coin.png", (772, 490)),
+    ("coin.png", (385, 20)),
+    ("coin.png", (338, 360)),
+    ("heart.png", (1, 335)),
+    ("heart.png", (700, 224)),
+    ("heart.png", (170, 98)),
+    ("gasoline.png", (650, 1))
+        ]
+    
+    #Criando coletáveis a partir da lista original:
+    coletaveis = [Coletavel(pos, nome) for nome, pos in coletaveis_originais]
     
     generator_img = pg.image.load("coletaveis/generator.png").convert_alpha()
     generator_rect = generator_img.get_rect(topleft=(33, 33))
@@ -71,6 +79,38 @@ def play(screen):
 
         player2.update(walls)
         player2.draw(screen)
+
+        # --- Colisão entre Player e Player2 ---
+        if player.rect.colliderect(player2.rect):
+            # Reduz 1 de vida
+            inv.inventario["vida"] -= 1
+
+            # Volta os jogadores para as posições iniciais
+            player.rect.topleft = (380, 700)
+
+            # Remover todas as lanternas que já estavam na tela (as que sobraram)
+            coletaveis = [c for c in coletaveis if c.tipo != "lanterna"]
+
+            # Recriar lanternas originais
+            for nome, pos in coletaveis_originais:
+                if nome == "flashlight.png":
+                    coletaveis.append(Coletavel(pos, nome))
+
+            # Resetar lanternas no inventário
+            inv.inventario["lanterna"] = 0  
+
+            # Verifica se a vida acabou
+            if inv.inventario["vida"] <= 0:
+
+                #Tela de derrota
+                screen.blit(img_derrota, (0, 0))
+                pg.display.update()
+
+                #Esperando 3 segundo antes de voltar para o menu:
+                pg.time.delay(3000)
+                
+                running = False
+                vitoria = 0  # derrota
 
         item_pego = pg.mixer.Sound("sons/collectible.ogg")
         canal_item_pego = pg.mixer.Channel(0)

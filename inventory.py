@@ -8,7 +8,7 @@ main_font = pg.font.SysFont("Papyrus", 30)
 
 # Inventário do jogador (começa com 0 de cada tipo)
 inventario = {
-    "vida": 0,
+    "vida": 1,
     "moedas": 0,
     "gasolina": 0,
 	"lanterna": 0
@@ -47,3 +47,9 @@ def mostrar_inventario(tela, imagens, inventario, fonte):
         texto = fonte.render(str(qtd), True, "#FFFFFF")
         tela.blit(texto, (x - img.get_width() + 20, y))
         y += img.get_height() + 30
+
+def resetar_inventario():
+    inventario["vida"] = 1
+    inventario["moedas"] = 0
+    inventario["gasolina"] = 0
+    inventario["lanterna"] = 0

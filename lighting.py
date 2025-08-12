@@ -12,7 +12,7 @@ class Lighting:
     def _create_light_mask(self):
         """Cria um gradiente circular suave."""
         for r in range(self.light_radius, 0, -1):
-            alpha = int(255 * (1 - (r / self.light_radius)))  
+            alpha = int(180* (1 - (r / self.light_radius)))  
             pygame.draw.circle(
                 self.light_surface,
                 (0, 0, 0, alpha),
