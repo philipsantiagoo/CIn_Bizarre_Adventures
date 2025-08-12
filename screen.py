@@ -108,10 +108,15 @@ def play(screen):
 
                 #Tela de derrota
                 screen.blit(img_derrota, (0, 0))
+                quadrado_texto = pg.Rect(0, 600, largura, 300)
+                pg.draw.rect(screen, "#656565", quadrado_texto)
+                fonte = pg.font.SysFont("Papyrus", 55, bold=True)
+                texto = fonte.render("Fala baixo que eu tô fazendo chamada...", True, "#FF2F2F")
+                screen.blit(texto, (quadrado_texto.x + 20, quadrado_texto.y + 10))
                 pg.display.update()
 
-                #Esperando 3 segundo antes de voltar para o menu:
-                pg.time.delay(3000)
+                #Esperando 5 segundo antes de voltar para o menu:
+                pg.time.delay(5000)
                 
                 running = False
                 vitoria = 0  # derrota
