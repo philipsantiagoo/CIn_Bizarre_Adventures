@@ -20,7 +20,7 @@ def play(screen):
     altura = mapa.height * mapa.tileheight
 
     screen = pg.display.set_mode((largura, altura))
-    pg.display.set_caption("Mapa com Player")
+    pg.display.set_caption("Menu")
 
     clock = pg.time.Clock()
 
@@ -36,8 +36,8 @@ def play(screen):
         if obj.name == "parede":
             walls.append(pg.Rect(obj.x, obj.y, obj.width, obj.height))
 
-    player = Player(position=(380, 700), speed=1.3)
-    player2 = Player2(position=(420, 70), speed=1.45)
+    player = Player(position=(380, 700), speed=2)
+    player2 = Player2(position=(420, 70), speed=1.5)
     
     #Lista original de coletáveis:
     coletaveis_originais = [
@@ -110,7 +110,7 @@ def play(screen):
                 screen.blit(img_derrota, (0, 0))
                 quadrado_texto = pg.Rect(0, 600, largura, 300)
                 pg.draw.rect(screen, "#656565", quadrado_texto)
-                fonte = pg.font.SysFont("Papyrus", 55, bold=True)
+                fonte = pg.font.SysFont("Papyrus", 45, bold=True)
                 texto = fonte.render("Fala baixo que eu tô fazendo chamada...", True, "#FF2F2F")
                 screen.blit(texto, (quadrado_texto.x + 20, quadrado_texto.y + 10))
                 pg.display.update()
