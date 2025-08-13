@@ -10,20 +10,27 @@ from lighting import Lighting
 
 
 def play(screen):
+    # inicialização
     pg.init()
     inv.resetar_inventario()
+
+    # carregar mapa
     base_path = os.path.dirname(os.path.abspath(__file__))
     mapa_path = os.path.join(base_path, 'mapa', 'map.tmx')
     mapa = load_pygame(mapa_path)
 
+    # largura e altura baseadas nas dimensões do mapa
     largura = mapa.width * mapa.tilewidth
     altura = mapa.height * mapa.tileheight
 
+    # criar tela
     screen = pg.display.set_mode((largura, altura))
     pg.display.set_caption("Menu")
 
+    # criar relógio
     clock = pg.time.Clock()
 
+    # imagens de derrota
     img_derrota = pg.image.load("telas/tela_derrota.jpg").convert()  # abre a imagem
     img_derrota = pg.transform.scale(img_derrota, (largura, altura))
 
@@ -31,11 +38,13 @@ def play(screen):
     lighting1 = Lighting((largura, altura), light_radius=25)  # player 1, raio variável
     lighting2 = Lighting((largura, altura), light_radius=80)  # player 2, raio fixo
 
+    # colisões com as paredes do mapa
     walls = []
     for obj in mapa.objects:
         if obj.name == "parede":
             walls.append(pg.Rect(obj.x, obj.y, obj.width, obj.height))
 
+    # posições dos jogadores e suas velocidades
     player = Player(position=(380, 700), speed=1.3)
     player2 = Player2(position=(420, 70), speed=1.45)
     
@@ -59,6 +68,7 @@ def play(screen):
     generator_img = pg.image.load("coletaveis/generator.png").convert_alpha()
     generator_rect = generator_img.get_rect(topleft=(33, 33))
 
+    # loop principal
     running = True
     while running:
         for event in pg.event.get():
@@ -67,6 +77,7 @@ def play(screen):
 
         screen.fill((0, 0, 0))
 
+        # cria o mapa em sí baseado nos tiles (16x16 pixels)
         for layer in mapa.visible_layers:
             if hasattr(layer, 'tiles'):
                 for x, y, tile in layer.tiles():
@@ -74,6 +85,7 @@ def play(screen):
         
         screen.blit(generator_img, generator_rect)
 
+        # atualiza os dois players quanto ao mapa e as paredes do mapa
         player.update(walls)
         player.draw(screen)
 
@@ -124,6 +136,7 @@ def play(screen):
         item_pego = pg.mixer.Sound("sons/collectible.ogg")
         canal_item_pego = pg.mixer.Channel(0)
 
+        # pega os coletáveis e remove do mapa
         for coletavel in coletaveis[:]:  
             coletavel.add_to_screen(screen)
             coletavel.colisao_coletavel(player.rect)
