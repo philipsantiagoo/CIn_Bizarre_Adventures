@@ -80,8 +80,8 @@
 # 
 
 
-### 📌 Etapa IV - *Programação adicional*
-• Nesse ponto cada membro avaliava o que poderiam acrescentar na jogabilidade do game para deixá-lo mais interativo, dinâmico e divertido. Importante ressaltar que essa etapa não significou o necessariamente no incremento dessas ideias, mas sim uma análise que se baseou na dificuldade de execução, experiência do game e tempo, lgumas delas foram:
+### 📌 Etapa V - *Programação adicional*
+• Nesse ponto cada membro avaliava o que poderiam acrescentar na jogabilidade do game para deixá-lo mais interativo, dinâmico e divertido. Importante ressaltar que essa etapa não significou necessariamente no incremento dessas ideias, mas sim uma análise que se baseou na dificuldade de execução, experiência do game e tempo, algumas delas foram:
 
 | Idealizador(s)         | Ideia(s)       | Avaliação           |
 |------------------|-----------------|--------------------|
