@@ -13,6 +13,7 @@ def play(screen):
     # inicialização
     pg.init()
     inv.resetar_inventario()
+    inv.resetar_score()
 
 
     # carregar mapa
@@ -72,10 +73,16 @@ def play(screen):
     ("heart.png", (1, 335)),
     ("heart.png", (700, 224)),
     ("heart.png", (170, 98)),
-    ("gasoline.png", (650, 1))
+    ("gasoline.png", (650, 1)),
+    ("coin.png", (95, 495)),
+    ("coin.png", (465, 560)),
+    ("coin.png", (395, 145)),
+    ("coin.png", (754, 608)),
+    ("coin.png", (480, 385)),
+    ("coin.png", (146, 207)),
+    ("coin.png", (593, 40))
         ]
     
-
     #Criando coletáveis a partir da lista original:
     coletaveis = [Coletavel(pos, nome) for nome, pos in coletaveis_originais]
     
@@ -84,7 +91,7 @@ def play(screen):
 
 
     # Timer
-    tempo_total = 10
+    tempo_total = 420
     start_ticks = pg.time.get_ticks()
 
     fonte_timer = pg.font.SysFont('Papyrus', 25, bold = True)
@@ -150,6 +157,7 @@ def play(screen):
                 fonte = pg.font.SysFont("Papyrus", 45, bold=True)
                 texto = fonte.render("Fala baixo que eu tô fazendo chamada...", True, "#FFFFFF")
                 screen.blit(texto, (quadrado_texto.x + 20, quadrado_texto.y + 10))
+                inv.display_score(screen)  # <<< Mostra o score final
                 pg.display.update()
 
                 #Esperando 5 segundo antes de voltar para o menu:
@@ -248,6 +256,10 @@ def play(screen):
 
         # Inventário
         inv.mostrar_inventario(screen, inv.imagens_itens, inv.inventario, inv.main_font)
+
+        #Score:
+        inv.display_score(screen)
+
 
         #lógica de vitória
         if inv.inventario.get('gasolina') > 0 and player.rect.colliderect(generator_rect) and player.interact():

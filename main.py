@@ -65,6 +65,7 @@ while executando:
                         musica_vitoria = pg.mixer.Sound("sons/victory.ogg")
                         musica_vitoria.play(0)
                         screen.blit(tela_vitoria, (0,0))
+                        gc.display_score(screen)  # <<< Mostra o score final
                         pg.display.update()
                         pg.time.delay(6000)
                         vitoria = 0

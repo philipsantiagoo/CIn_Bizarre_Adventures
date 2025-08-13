@@ -5,6 +5,9 @@ pg.init()
 screen = pg.display.set_mode((800, 750))
 main_font = pg.font.SysFont("Papyrus", 30)
 
+#Score:
+score = 0
+
 
 # Inventário do jogador (começa com 0 de cada tipo)
 inventario = {
@@ -31,8 +34,11 @@ for tipo, img in imagens_itens.items():
 
 # Função para adicionar item no inventário
 def coletar_item(item):
+    global score
     if item.tipo in inventario:
         inventario[item.tipo] += 1
+        if item.tipo == "moedas":
+            score += 100
     else:
         inventario[item.tipo] = 1
 
@@ -53,3 +59,21 @@ def resetar_inventario():
     inventario["moedas"] = 0
     inventario["gasolina"] = 0
     inventario["lanterna"] = 0
+
+def display_score(tela):
+    # Texto "Score"
+    score_font = pg.font.SysFont("Papyrus", 30)
+    score_titulo_surf = score_font.render("Score", True, (255, 255, 255))
+    score_titulo_rect = score_titulo_surf.get_rect(center=(400, 20))
+    tela.blit(score_titulo_surf, score_titulo_rect)
+
+
+    # Valor do score
+    valor_font = pg.font.SysFont("Papyrus", 30)
+    score_valor_surf = valor_font.render(str(score), True, (255, 0, 0))
+    score_valor_rect = score_valor_surf.get_rect(center=(400, 48))
+    tela.blit(score_valor_surf, score_valor_rect)
+    
+def resetar_score():
+    global score
+    score = 0
