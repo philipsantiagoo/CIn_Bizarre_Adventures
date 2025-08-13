@@ -27,6 +27,7 @@ button_surface = pg.transform.scale(button_surface, (280, 100))
 tela_vitoria = pg.image.load("telas/tela_vitoria.jpg")
 tela_vitoria = pg.transform.scale(tela_vitoria, (800, 750))
 
+
 # criacao do botao funcional em si
 main_button = button.Button(button_surface, 400, 600, "Play")
 main_font = pg.font.SysFont("Papyrus", 65)
