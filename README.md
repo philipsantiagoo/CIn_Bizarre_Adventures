@@ -241,3 +241,33 @@ Prepare-se para um jogo onde a luz é esperança, a escuridão é ameaça, e cad
 
 <h1 align="center" style="margin-top: 20px;">Capturas de Tela</h1>
 
+<p align="center">
+  <img src="Capturas de Tela/menu.png" alt="Menu" width="300"/>
+  <img src="Capturas de Tela/guia.png" alt="Guia" width="300"/>
+  <img src="Capturas de Tela/gameplay.png" alt="Gameplay" width="300"/>
+  <img src="Capturas de Tela/vitória.png" alt="Vitória" width="300"/>
+  <img src="Capturas de Tela/derrota.png" alt="Derrota" width="300"/>
+  <img src="Capturas de Tela/sem tempo.png" alt="Sem Tempo" width="300"/>
+</p>
+
+
+
+<br>
+
+<h1 align="center" style="margin-top: 20px;">Como jogar</h1>
+
+```Bash
+Instale o pyhton 3
+```
+
+```Bash
+pip install pygame
+```
+
+```Bash
+pip install pytmx
+```
+
+```Bash
+git clone https://github.com/philipsantiagoo/CIn_Bizarre_Adventures.git
+```
