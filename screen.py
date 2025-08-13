@@ -1,4 +1,5 @@
 import pygame as pg
+from sys import exit
 import os
 import inventory as inv
 from pytmx.util_pygame import load_pygame
@@ -14,6 +15,7 @@ def play(screen):
     pg.init()
     inv.resetar_inventario()
     inv.resetar_score()
+    vitoria = 0
 
 
     # carregar mapa
@@ -29,7 +31,7 @@ def play(screen):
 
     # criar tela
     screen = pg.display.set_mode((largura, altura))
-    pg.display.set_caption("Menu")
+    pg.display.set_caption("Tela de Jogo")
 
 
     # criar relógio
@@ -103,11 +105,13 @@ def play(screen):
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 running = False
+                pg.quit()
+                exit()
 
         screen.fill((0, 0, 0))
 
 
-        # cria o mapa em sí baseado nos tiles (16x16 pixels)
+        # cria o mapa em si baseado nos tiles (16x16 pixels)
         for layer in mapa.visible_layers:
             if hasattr(layer, 'tiles'):
                 for x, y, tile in layer.tiles():

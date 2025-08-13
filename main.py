@@ -1,9 +1,9 @@
 import pygame as pg
 from sys import exit
-import inventory as gc
+import inventory as inv
 import button
 from screen import play
-
+from tutorial import tutorial
 
 # inicia o pygame
 pg.init()
@@ -29,8 +29,9 @@ tela_vitoria = pg.transform.scale(tela_vitoria, (800, 750))
 
 
 # criacao do botao funcional em si
-main_button = button.Button(button_surface, 400, 600, "Play")
-main_font = pg.font.SysFont("Papyrus", 65)
+main_button = button.Button(button_surface, 400, 500, "Play")
+
+tutorial_button = button.Button(button_surface, 400, 600, "Tutorial")
 
 vitoria = 0
 
@@ -47,14 +48,12 @@ while executando:
             pg.quit()
             exit()
         
-        # se o evento for de clique do mouse, verifica se o botao foi clicado
+        # se o evento for de clique do mouse, verifica onde foi clicado
         if event.type == pg.MOUSEBUTTONDOWN:
-            if event.type == pg.QUIT:  # fechar a janela
-                executando = False
             if event.type == pg.KEYDOWN:  # opcional: sair ao apertar ESC
                 if event.key == pg.K_ESCAPE:
-                    executando = False 
-            if main_button.checkForInput(mouse_pos): # se foi clicado, inicia o jogo
+                    executando = False
+            if main_button.checkForInput(mouse_pos): # se foi clicado no botao de play, inicia o jogo
                 pg.mixer.music.load("sons/background.ogg")
                 pg.mixer.music.play(-1)  # toca a música em loop
                 fechar = play(screen) # inicia o jogo
@@ -65,18 +64,22 @@ while executando:
                         musica_vitoria = pg.mixer.Sound("sons/victory.ogg")
                         musica_vitoria.play(0)
                         screen.blit(tela_vitoria, (0,0))
-                        gc.display_score(screen)  # <<< Mostra o score final
+                        inv.display_score(screen)  # <<< Mostra o score final
                         pg.display.update()
                         pg.time.delay(6000)
                         vitoria = 0
                     else:
                         vitoria = 0
+            if tutorial_button.checkForInput(mouse_pos): # se clicou no botao de tutorial, abre os comandos do jogo
+                tutorial(screen)
 
     if vitoria == 0:
         # atualiza a tela
         screen.blit(background, (0, 0))
         main_button.update()
         main_button.changeColor(mouse_pos)
+        tutorial_button.update()
+        tutorial_button.changeColor(mouse_pos)
         pg.display.update()
 
 pg.quit()
