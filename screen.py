@@ -127,6 +127,14 @@ def play(screen):
         player2.update(walls)
         player2.draw(screen)
 
+        # atualizando:
+        # Ajusta a velocidade do player 1 conforme o score
+        if inv.score >= 400:
+            player.speed = 1.5
+        else:
+            player.speed = 1.3
+
+
 
         # --- Colisão entre Player e Player2 ---
         if player.rect.colliderect(player2.rect) and player2.hit():
