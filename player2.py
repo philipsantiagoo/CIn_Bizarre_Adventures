@@ -2,15 +2,16 @@ import pygame as pg
 import os
 
 
-# definindo a classe player que controla o personagem principal
+# definindo a classe player 2 que controla o personagem secundário
 class Player2(pg.sprite.Sprite):
-    def __init__(self, position, speed):
+    def __init__(self, position, speed):    # Configuração inicial dos atributos do player 2
         super().__init__()
         self.speed = speed
         self.direction = 'down'
         self.frame_index = 0
         self.animation_speed = 0.15
 
+        # Funcionamento das direções dos sprites. Listas dos sprites para serem animados utilizando os sprites do player 2.
         # coletando as imagens da pasta
         self.images = {
             'down': [
@@ -39,14 +40,14 @@ class Player2(pg.sprite.Sprite):
         self.rect = self.image.get_rect(topleft=position)
 
 
-    # função para controlar o personagem por meio dos botões (W, A, S, D) do teclado
+    # método para controlar o personagem 2 por meio dos botões (setinhas) do teclado
     def handle_input(self):
         keys = pg.key.get_pressed()
         directionX, directionY = 0, 0
 
         # Reset direction só se alguma tecla for pressionada
         # para evitar erro de direção errada
-
+        # Movimento em 4 direções baseado na velocidade do jogador 2
         if keys[pg.K_UP]:
             directionY = -self.speed
             self.direction = 'up'
@@ -66,8 +67,9 @@ class Player2(pg.sprite.Sprite):
         return directionX, directionY
 
 
-    # função para controlar os movimentos no plano cartesiano
+    # método para controlar os movimentos no plano cartesiano
     # walls são as paredes atribuídas pelo mapa no tiled
+    # Fazer o jogador 2 não atravessar paredes nem no eixo x e nem no eixo y
     def move(self, directionX, directionY, walls):
         # Movimento X
         self.rect.x += directionX
@@ -88,6 +90,7 @@ class Player2(pg.sprite.Sprite):
                     self.rect.top = wall.bottom
 
 
+    # Método para percorrer a listas de sprites da direção atual (gerando uma animação).
     # controla a animação do personagem
     def animate(self):
         self.frame_index += self.animation_speed
@@ -96,6 +99,7 @@ class Player2(pg.sprite.Sprite):
         self.image = self.images[self.direction][int(self.frame_index)]
 
 
+    # Impede o jogador 2 de sair do mapa. Usa métodos da própria classe para determinar qual borda do mapa o jogador está.
     # captura o movimento do personagem por frame
     def update(self, walls):
         directionX, directionY = self.handle_input()
@@ -119,9 +123,10 @@ class Player2(pg.sprite.Sprite):
     def draw(self, surface):
         surface.blit(self.image, self.rect)
 
-    
+    # Método para input do ataque ao jogador 1
     #Golpe
     def hit(self):
         keys = pg.key.get_pressed()
         if keys[pg.K_k]:
             return True
+
