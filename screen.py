@@ -93,7 +93,7 @@ def play(screen):
 
 
     # Timer
-    tempo_total = 90
+    tempo_total = 200
     start_ticks = pg.time.get_ticks()
 
     fonte_timer = pg.font.SysFont('Papyrus', 25)
@@ -161,7 +161,7 @@ def play(screen):
                 fonte = pg.font.SysFont("Papyrus", 45, bold=True)
                 texto = fonte.render("Fala baixo que eu tô fazendo chamada...", True, "#FFFFFF")
                 screen.blit(texto, (quadrado_texto.x + 20, quadrado_texto.y + 10))
-                inv.display_score(screen)  # <<< Mostra o score final
+                inv.display_score(screen, (40, 20))  # <<< alinhado com timer
                 pg.display.update()
 
                 #Esperando 5 segundo antes de voltar para o menu:
@@ -256,6 +256,7 @@ def play(screen):
 
             # desenha a imagem de derrota
             screen.blit(tempo_acabou, (0, 0))
+            inv.display_score(screen, (40, 20))  # Score na tela de derrota
             pg.display.flip()
 
             pg.time.delay(5000)

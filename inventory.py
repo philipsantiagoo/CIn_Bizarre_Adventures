@@ -60,18 +60,23 @@ def resetar_inventario():
     inventario["gasolina"] = 0
     inventario["lanterna"] = 0
 
-def display_score(tela):
+def display_score(tela, pos=None):
+
+    if pos is None:
+        pos = (400,30)
     # Texto "Score"
     score_font = pg.font.SysFont("Papyrus", 25)
     score_titulo_surf = score_font.render("Score", True, (255, 255, 255))
-    score_titulo_rect = score_titulo_surf.get_rect(center=(400, 30))
+    score_titulo_rect = score_titulo_surf.get_rect(center=pos)
     tela.blit(score_titulo_surf, score_titulo_rect)
 
 
     # Valor do score
     valor_font = pg.font.SysFont("Papyrus", 25)
     score_valor_surf = valor_font.render(str(score), True, (255, 0, 0))
-    score_valor_rect = score_valor_surf.get_rect(center=(400, 50))
+
+    valor_pos = (pos[0], pos[1] + 20)
+    score_valor_rect = score_valor_surf.get_rect(center=valor_pos)
     tela.blit(score_valor_surf, score_valor_rect)
     
 def resetar_score():
