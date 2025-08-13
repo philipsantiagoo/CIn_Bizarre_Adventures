@@ -91,10 +91,10 @@ def play(screen):
 
 
     # Timer
-    tempo_total = 420
+    tempo_total = 90
     start_ticks = pg.time.get_ticks()
 
-    fonte_timer = pg.font.SysFont('Papyrus', 25, bold = True)
+    fonte_timer = pg.font.SysFont('Papyrus', 25)
 
 
     # loop principal
@@ -176,8 +176,13 @@ def play(screen):
             coletavel.colisao_coletavel(player.rect)
             if getattr(coletavel, 'coletado', False): 
                 coletaveis.remove(coletavel)
-                pg.mixer.music.set_volume(0.2)
-                item_pego.play()
+                if coletavel.tipo == 'lanterna':
+                    lanterna_sound = pg.mixer.Sound("sons/flashlight.ogg")
+                    pg.mixer.music.set_volume(1)
+                    lanterna_sound.play()
+                else:
+                    item_pego.play()
+                    pg.mixer.music.set_volume(0.2)
                 
         if not canal_item_pego.get_busy():
             pg.mixer.music.set_volume(1.0)

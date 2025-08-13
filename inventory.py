@@ -62,16 +62,16 @@ def resetar_inventario():
 
 def display_score(tela):
     # Texto "Score"
-    score_font = pg.font.SysFont("Papyrus", 30)
+    score_font = pg.font.SysFont("Papyrus", 25)
     score_titulo_surf = score_font.render("Score", True, (255, 255, 255))
-    score_titulo_rect = score_titulo_surf.get_rect(center=(400, 20))
+    score_titulo_rect = score_titulo_surf.get_rect(center=(400, 30))
     tela.blit(score_titulo_surf, score_titulo_rect)
 
 
     # Valor do score
-    valor_font = pg.font.SysFont("Papyrus", 30)
+    valor_font = pg.font.SysFont("Papyrus", 25)
     score_valor_surf = valor_font.render(str(score), True, (255, 0, 0))
-    score_valor_rect = score_valor_surf.get_rect(center=(400, 48))
+    score_valor_rect = score_valor_surf.get_rect(center=(400, 50))
     tela.blit(score_valor_surf, score_valor_rect)
     
 def resetar_score():
