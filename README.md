@@ -21,13 +21,15 @@
 
 
 ### 📌 Equipe
-| Nome completo                              | Email     |
-|-------------------------------------------|-------------|
-| Luiz Philip Santiago da Silva             | `< lpss@cin.ufpe.br >`    |
-| Felipe Augusto Lira Dias                  | `< fald@cin.ufpe.br >`    |
-| Arthur Dias de Oliveira                   | `< ado@cin.ufpe.br >`     |
-| Gabriel André Souza Fernandes da Cunha    | `< gasfc@cin.ufpe.br >`   |
-| Andreson Gomes de Lima                    | `< agl4@cin.ufpe.br >`    |
+<div align="center">
+
+| Philip Santiago | Arthur Dias | Andreson Gomes | Gabriel André | Felipe Augusto |
+|:---------------:|:-------:|:-------------:|:---------------:|:------:|
+| <img src="https://github.com/philipsantiagoo.png" width="100"> | <img src="https://github.com/ado-938.png" width="100"> | <img src="https://github.com/ANDRESONGOMES.png" width="100"> | <img src="https://github.com/GabrielAndreSFC.png" width="100"> | <img src="https://github.com/lipek6.png" width="100"> |
+| `< lpss@cin.ufpe.br >` | `< ado@cin.ufpe.br >` | `< agl4@cin.ufpe.br >` | `< gasfc@cin.ufpe.br >` | `< fald@cin.ufpe.br >` |
+| <a href="https://github.com/philipsantiagoo"><img src="https://img.shields.io/badge/-GitHub-black?logo=github&logoColor=white&style=flat" /></a> | <a href="https://github.com/ado-938"><img src="https://img.shields.io/badge/-GitHub-black?logo=github&logoColor=white&style=flat" /></a> | <a href="https://github.com/ANDRESONGOMES"><img src="https://img.shields.io/badge/-GitHub-black?logo=github&logoColor=white&style=flat" /></a> | <a href="https://github.com/GabrielAndreSFC"><img src="https://img.shields.io/badge/-GitHub-black?logo=github&logoColor=white&style=flat" /></a> | <a href="https://github.com/lipek6"><img src="https://img.shields.io/badge/-GitHub-black?logo=github&logoColor=white&style=flat" /></a> |
+
+</div>
 
 
 # 
