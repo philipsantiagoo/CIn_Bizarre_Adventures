@@ -90,7 +90,8 @@
 | Gabriel          | Mecânica de tecla para eliminação do player 1         | `Positiva`           |
 | Philip           | Mecânica de furto   | `Positiva`     |
 | Felipe           | Mecânica de zoom | `Em análise` |
-| Andreson | Score com moedas | `Em processamento` |
+| Andreson | Score com moedas | `Implementada` |
+| Philip | Aumento de velocidade | `Implementada` |
 
 
 <br>
@@ -168,8 +169,8 @@ CIN_BIZARRE_ADVENTURES/
 │   ├── player.py                          # arquivo com a classe: 'class Player' responsável pela lógica de criação do player_1, sua movimentação, animação, etc
 │   ├── player2.py                         # arquivo com a classe: 'class Player2' responsável pela lógica de criação do player_2, sua movimentação, animação, etc
 │   ├── screen.py                          # arquivo responsável por unir os demais arquivos na tela do jogo
-│   ├── main.py                            # arquivo responsável por fazer o jogo 'rodar'            
-
+│   ├── main.py                            # arquivo responsável por fazer o jogo 'rodar'
+│   ├── tutorial.py                        # arquivo da tela de tutorial
 ```
 
 
@@ -235,3 +236,40 @@ A tensão é constante. Cada canto do labirinto pode esconder o perigo, e Vermel
 <p align="center">
 Prepare-se para um jogo onde a luz é esperança, a escuridão é ameaça, e cada decisão pode ser a diferença entre sobreviver ou ser eliminado.
 </p>
+
+
+
+<br>
+
+<h1 align="center" style="margin-top: 20px;">Capturas de Tela</h1>
+
+<p align="center">
+  <img src="Capturas de Tela/menu.png" alt="Menu" width="300"/>
+  <img src="Capturas de Tela/guia.png" alt="Guia" width="300"/>
+  <img src="Capturas de Tela/gameplay.png" alt="Gameplay" width="300"/>
+  <img src="Capturas de Tela/vitória.png" alt="Vitória" width="300"/>
+  <img src="Capturas de Tela/derrota.png" alt="Derrota" width="300"/>
+  <img src="Capturas de Tela/sem tempo.png" alt="Sem Tempo" width="300"/>
+</p>
+
+
+
+<br>
+
+<h1 align="center" style="margin-top: 20px;">Como jogar</h1>
+
+```Bash
+Instale o pyhton 3
+```
+
+```Bash
+pip install pygame
+```
+
+```Bash
+pip install pytmx
+```
+
+```Bash
+git clone https://github.com/philipsantiagoo/CIn_Bizarre_Adventures.git
+```
